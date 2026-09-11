@@ -61,6 +61,14 @@ img {
     color:#181818;
 }
 
+.btn {
+    background: var(--btn-primary);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
 /* Header */
 .navbar {
     width: 100%;
@@ -97,6 +105,7 @@ img {
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 2%;
+    text-wrap: nowrap;
 }
 
 /* Nav Menu */
@@ -106,7 +115,6 @@ img {
 }
 
 .nav-menu-list a {
-    font-family: SF Pro Display;
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
@@ -117,37 +125,39 @@ img {
 
 /* Nav Buttons */
 .nav-buttons {
-    /* margin: 14px 0; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btn-register {
     width: 92;
     height: 40;
-    border-radius: 6px;
     border-width: 1px;
     padding-top: 10px;
     padding-right: 18px;
     padding-bottom: 10px;
     padding-left: 18px;
-    gap: 10px;
     color: var(--btn-primary);
+    background: white;
     border: 1px solid;
 }
 
 .btn-signin {
-    font-family: SF Pro Display;
     width: 82;
     height: 40;
-    border-radius: 6px;
     padding-top: 10px;
     padding-right: 18px;
     padding-bottom: 10px;
     padding-left: 18px;
-    gap: 10px;
-    opacity: 1;
-    background-color: var(--btn-primary);
-    color: white;
     margin-left: 10px;
+}
+
+.btn-register-icon {
+    display: none;
+}
+
+.btn-signin-icon {
+    display: none;
 }
 
 /* Hero */
@@ -163,7 +173,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
 }
 
 .hero-content {
@@ -177,6 +187,7 @@ img {
     top: 0;
     left: 0;
     color: white;
+    background: #0000004D;
     text-align: center;
 }
 
@@ -208,6 +219,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-self: center;
+    flex-wrap: wrap;
     position: relative;
     left: 50%;
     translate: -50% -50%;
@@ -219,7 +231,7 @@ img {
     gap: 12px;
 }
 
-.search-bar input, .search-bar .placeholder {
+.search-bar .input-field input, .search-bar .placeholder {
     width: 100%;
     padding: 11px 12px 12px 12px;
     border-radius: 4px;
@@ -256,6 +268,8 @@ img {
     align-items: center;
     z-index: -1;
     color: #4F4F4F;
+    text-wrap: nowrap;
+    overflow: hidden;
 }
 
 .search-bar .placeholder img {
@@ -281,20 +295,18 @@ img {
 .guests {
     flex: 210;
 }
-.guests input {
-    appearance: none;
-}
-
 
 .search-submit {
     flex: 148;
 }
+
 .search-submit input {
-    background: var(--btn-primary);
-    color: white;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
+    width: 100%;
+    height: 44;
+    padding-top: 12px;
+    padding-right: 18px;
+    padding-bottom: 12px;
+    padding-left: 18px;
 }
 
 /* Advisory Banner */
@@ -507,6 +519,7 @@ img {
 .footer-links {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer-links .brand-link img {
@@ -577,4 +590,59 @@ img {
 .copyright-text span {
     position: relative;
     left: 75%;
+}
+
+/* ==================================== */
+/* ===== Media Queries (Laptop) ======= */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    /* Header */
+
+    /* Nav Menu */
+    .nav-menu-list {
+        gap: 24px;
+    }
+
+
+    /* Nav Buttons */
+    .btn-register, .btn-signin {
+        padding: 6px 12px 4px;
+    }
+
+    .btn-register-text {
+        display: none;
+    }
+
+    .btn-signin-text {
+        display: none;
+    }
+
+    .btn-register-icon {
+        display: inline;
+    }
+
+    .btn-signin-icon {
+        display: inline;
+    }
+
+    /* Search Bar */
+    .search-field {
+        flex-basis: 100%;
+    }
+
+    /* Footer */
+    .brand-link {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+/* ==================================== */
+/* ==== Media Queries (Tablet) ==== */
+/* ==================================== */
+
+@media (max-width: 790px) {
+
 }
