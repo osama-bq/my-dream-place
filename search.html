@@ -135,6 +135,163 @@
 </div>
 <!-- Search Bar -->
 
+<!-- Search -->
+<main class="search-result container">
+    <section class="filter">
+        <div class="filter-card filter-search">
+            <div class="filter-card-header">
+                <h3>Search by property name</h3>
+                <input type="search">
+            </div>
+        </div>
+        <div class="filter-card filter-budget">
+            <div class="filter-card-header">
+                <h3>Your budget per day</h3>
+            </div>
+            <div class="filter-card-body">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="price-0-200" name="price" value="0-200">
+                        <label for="price-0-200">$ 0 - $ 200</label>
+                        <span class="count">200</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="price-200-500" name="price" value="200-500">
+                        <label for="price-200-500">$ 200 - $ 500</label>
+                        <span class="count">100</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="price-500-1000" name="price" value="500-1000">
+                        <label for="price-500-1000">$ 500 - $ 1,000</label>
+                        <span class="count">15</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="price-1000-2000" name="price" value="1000-2000">
+                        <label for="price-1000-2000">$ 1,000 - $ 2,000</label>
+                        <span class="count">12</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="price-2000-5000" name="price" value="2000-5000">
+                        <label for="price-2000-5000">$ 2,000 - $ 5,000</label>
+                        <span class="count">230</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter-card filter-rating">
+            <div class="filter-card-header">
+                <h3>Rating</h3>
+            </div>
+            <div class="filter-card-body">
+                <ul>
+                    <li>1 <img src="res/icon/star.png" alt="star"></li>
+                    <li>2 <img src="res/icon/star.png" alt="star"></li>
+                    <li>3 <img src="res/icon/star.png" alt="star"></li>
+                    <li>4 <img src="res/icon/star.png" alt="star"></li>
+                    <li>5 <img src="res/icon/star.png" alt="star"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter-card filter-popular">
+            <div class="filter-card-header">
+                <h3>Popular Filters</h3>
+            </div>
+            <div class="filter-card-body">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="free-cancellation" name="amenities" value="free-cancellation">
+                        <label for="free-cancellation">Free cancellation</label>
+                        <span class="count">200</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="spa" name="amenities" value="spa">
+                        <label for="spa">Spa</label>
+                        <span class="count">100</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="beach-front" name="amenities" value="beach-front">
+                        <label for="beach-front">Beach front</label>
+                        <span class="count">15</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="hot-tub-jacuzzi" name="amenities" value="hot-tub-jacuzzi">
+                        <label for="hot-tub-jacuzzi">Hot tub/ jacuzzi</label>
+                        <span class="count">12</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="book-without-credit-card" name="amenities" value="book-without-credit-card">
+                        <label for="book-without-credit-card">Book without credit card</label>
+                        <span class="count">230</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="no-prepayment" name="amenities" value="no-prepayment">
+                        <label for="no-prepayment">No prepayment</label>
+                        <span class="count">12</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter-card filter-activities">
+            <div class="filter-card-header">
+                <h3>Activities</h3>
+            </div>
+            <div class="filter-card-body">
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="fishing" name="activities" value="fishing">
+                        <label for="fishing">Fishing</label>
+                        <span class="count">200</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="hiking" name="activities" value="hiking">
+                        <label for="hiking">Hiking</label>
+                        <span class="count">100</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="beach" name="activities" value="beach">
+                        <label for="beach">Beach</label>
+                        <span class="count">15</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="cycling" name="activities" value="cycling">
+                        <label for="cycling">Cycling</label>
+                        <span class="count">12</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="sauna" name="activities" value="sauna">
+                        <label for="sauna">Sauna</label>
+                        <span class="count">230</span>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <input type="checkbox" id="night-lights" name="activities" value="night-lights">
+                        <label for="night-lights">Night lights</label>
+                        <span class="count">12</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="result-list">
+
+    </section>
+</main>
+<!-- Search -->
+
+
 <!-- Advisory Banner -->
 <div class="container adv-banner">
     <img src="res/icon/warning.png" alt="warning Icon">
