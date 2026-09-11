@@ -1,0 +1,16 @@
+/* Header */
+.navbar {
+    background: transparent;
+    position: absolute;
+}
+.navbar h3, .nav-menu-list li > a {
+    color: white;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, #2969BF 0%, #144E9D 100%);
+
+}
