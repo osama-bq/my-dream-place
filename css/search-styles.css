@@ -56,7 +56,7 @@
 
 /* Filter */
 .filter {
-    min-width: 295px;
+    flex: 1;
 }
 
 .filter-card {
@@ -123,17 +123,16 @@
 
 .filter-rating .btn-group .btn-group-item {
     border-color: #E0E0E0;
+    padding: 4px;
 }
 
-.filter-rating .filter-card-body ul li img {
-    width: 18px;
-    height: 18px;
+.filter-rating .star {
     margin-left: 5px;
 }
 
 /* Result List Section */
 .result-list-section {
-    width: 100%;
+    flex: 3;
 }
 
 .result-list-title {
@@ -154,7 +153,9 @@
 }
 
 .sort-and-filter-bar .btn-group {
-    height: 40px;
+    width: 66.67%;
+    max-width: 615px;
+    min-height: 20px;
     border: 1px solid var(--btn-primary);
     border-radius: 6px;
 }
@@ -165,7 +166,10 @@
     font-size: 15px;
     line-height: 20px;
     letter-spacing: 2%;
-    padding: 10px 18px;
+    text-wrap: wrap;
+    flex: 1 1 auto;
+    padding: 10px 12px;
+    text-align: center;
 }
 
 .dropdown-sort-by {
@@ -208,14 +212,22 @@
 }
 
 .result-list .card-info {
-    position: relative;
     flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-list .card-info .left-side,
+.result-list .card-info .right-side {
+    display: flex;
+    flex-direction: column;
 }
 
 .result-list .card-info .title,
 .result-list .card-info .subtitle,
 .result-list .card-info .desc {
     max-width: 380px;
+    /* width: 66.67%; */
 }
 
 .result-list .card-info .title {
@@ -251,7 +263,8 @@
     line-height: 140%;
     letter-spacing: 2%;
     vertical-align: middle;
-    color: #4F4F4F
+    color: #4F4F4F;
+    margin-bottom: 18px;
 }
 
 .result-list .card-info .rating .stars {
@@ -268,7 +281,7 @@
     );
 }
 
-.result-list .card-info .rating .stars .star {
+.star {
     height: 20px;
     width: 20px;
     padding: 2.5px;
@@ -283,16 +296,8 @@
     color: #4F4F4F;
 }
 
-.result-list .card-info .btn,
-.result-list .card-info .offer,
-.result-list .card-info .price {
-    position: absolute;
-}
-
 .result-list .card-info .btn {
-    bottom: 0;
-    width: 137;
-    height: 40;
+    width: fit-content;
     border-radius: 6px;
     padding-top: 10px;
     padding-right: 18px;
@@ -303,21 +308,20 @@
     font-size: 15px;
     line-height: 20px;
     letter-spacing: 2%;
+    margin-top: auto;
 }
 
 .result-list .card-info .offer {
-    top: 0;
-    right: 0;
     background: #EB5757;
+    text-wrap: nowrap;
 }
 
 
 .result-list .card-info .price {
-    bottom: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-top: auto;
 }
 
 .result-list .card-info .price .discount {
