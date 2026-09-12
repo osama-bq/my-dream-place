@@ -393,3 +393,36 @@
     display: block;
     margin: 0 auto;
 }
+
+
+/* ==================================== */
+/* ===== Media Queries (Laptop) ======= */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    .card-row {
+        flex-direction: column;
+    }
+
+    .sort-and-filter-bar {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .filter-rating .btn-group .btn-group-item {
+        flex-wrap: wrap;
+    }
+
+    .dropdown-sort-by,
+    .sort-and-filter-bar .btn-group {
+        width: 100%;
+    }
+
+    .result-list-section {
+        flex: 2;
+    }
+
+    .filter-list-item .count {
+        display: none;
+    }
+}
