@@ -1,3 +1,37 @@
+.btn-group {
+    display: flex;
+    border: 1px solid;
+}
+
+.btn-group .btn-group-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.btn-group .btn-group-item.selected {
+    background: #2F80ED0D;
+    color: var(--btn-primary);
+}
+
+.btn-group .btn-group-item:not(:last-child) {
+    border-right: 1px solid;
+}
+
+.badge {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 2%;
+    background: var(--btn-primary);
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
 /* Header */
 .navbar {
     background: transparent;
@@ -17,11 +51,12 @@
 /* Seach Result */
 .search-result {
     display: flex;
+    gap: 30px;
 }
 
 /* Filter */
 .filter {
-    width: 295px;
+    min-width: 295px;
 }
 
 .filter-card {
@@ -48,6 +83,8 @@
 .filter-search .filter-card-header input {
     width: 100%;
     height: 44px;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
 }
 
 .filter-card-body {
@@ -74,31 +111,281 @@
     margin-left: auto;
 }
 
-.filter-rating .filter-card-body ul {
+.filter-rating .btn-group {
     height: 46px;
-    display: flex;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 2%;
-    border: 1px solid #E0E0E0;
+    border-color: #E0E0E0;
     border-radius: 5px;
 }
 
-.filter-rating .filter-card-body ul li {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.filter-rating .filter-card-body ul li:not(:last-child) {
-    border-right: 1px solid #E0E0E0;
+.filter-rating .btn-group .btn-group-item {
+    border-color: #E0E0E0;
 }
 
 .filter-rating .filter-card-body ul li img {
     width: 18px;
     height: 18px;
     margin-left: 5px;
+}
+
+/* Result List Section */
+.result-list-section {
+    width: 100%;
+}
+
+.result-list-title {
+    font-family: SF Pro Display;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #181818;
+    margin-bottom: 24px;
+}
+
+/* Sort and filter bar */
+.sort-and-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.sort-and-filter-bar .btn-group {
+    height: 40px;
+    border: 1px solid var(--btn-primary);
+    border-radius: 6px;
+}
+
+.sort-and-filter-bar .btn-group .btn-group-item {
+    border-color: var(--btn-primary);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2%;
+    padding: 10px 18px;
+}
+
+.dropdown-sort-by {
+    width: 190px;
+    height: 48px;
+}
+
+.dropdown-sort-by select {
+    height: 100%;
+    width: 100%;
+    padding-top: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    border-radius: 6px;
+    border: 1px solid #BDBDBD;
+    background: white;
+}
+
+/* Result List */
+.result-list {
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.result-list .cards {
+    gap: 24px;
+}
+
+.result-list .card-row {
+    display: flex;
+    gap: 24px;
+    padding: 20px 24px 20px 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+}
+
+.result-list .card-img {
+    flex: 1;
+}
+
+.result-list .card-info {
+    position: relative;
+    flex: 2;
+}
+
+.result-list .card-info .title,
+.result-list .card-info .subtitle,
+.result-list .card-info .desc {
+    max-width: 380px;
+}
+
+.result-list .card-info .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    vertical-align: middle;
+    color: #1A1A1A;
+    margin-bottom: 7px;
+}
+
+.result-list .card-info .rating {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.result-list .card-info .subtitle {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    color: #4F4F4F;
+    margin-bottom: 4px;
+}
+
+.result-list .card-info .desc {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    color: #4F4F4F
+}
+
+.result-list .card-info .rating .stars {
+    width: 100px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        black 0%,
+        black 70%, /* {rating * 20} % */
+        #0005 70%, /* {rating * 20} % */
+        #0005 100%
+    );
+}
+
+.result-list .card-info .rating .stars .star {
+    height: 20px;
+    width: 20px;
+    padding: 2.5px;
+}
+
+.result-list .card-info .rating .amount {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    color: #4F4F4F;
+}
+
+.result-list .card-info .btn,
+.result-list .card-info .offer,
+.result-list .card-info .price {
+    position: absolute;
+}
+
+.result-list .card-info .btn {
+    bottom: 0;
+    width: 137;
+    height: 40;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2%;
+}
+
+.result-list .card-info .offer {
+    top: 0;
+    right: 0;
+    background: #EB5757;
+}
+
+
+.result-list .card-info .price {
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.result-list .card-info .price .discount {
+    background: #219653;
+    margin-bottom: 6px;
+}
+
+.result-list .card-info .price .details {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: right;
+    vertical-align: middle;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.result-list .card-info .price .amount {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    text-align: right;
+    vertical-align: middle;
+    margin-bottom: 6px;
+}
+
+.result-list .card-info .price .prev-amount {
+    font-size: 14px;
+    color: #EB5757;
+}
+
+.result-list .card-info .price .current-amount {
+    font-size: 20px;
+    color: #333333;;
+}
+
+.result-list .card-info .tax-msg {
+    font-family: SF Pro Display;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: right;
+    vertical-align: middle;
+    color: #333333;
+}
+
+.load-more {
+    margin-bottom: 60px;
+}
+
+.load-more .btn {
+    background: #2F80ED1A;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2%;
+    color: var(--btn-primary);
+    width: 156;
+    height: 40;
+    padding-top: 10px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    display: block;
+    margin: 0 auto;
 }
