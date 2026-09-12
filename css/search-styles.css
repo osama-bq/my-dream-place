@@ -55,6 +55,30 @@
 }
 
 /* Filter */
+.btn-filter {
+    height: 48px;
+    background: #F2F2F2;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: #181818;
+}
+
+.btn-collapse {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.bi-chevron-compact-down {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
 .filter {
     flex: 1;
 }
@@ -68,7 +92,6 @@
 .filter-card-header {
     padding: 18px;
     background: #F2F2F2;
-    font-family: SF Pro Display;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
@@ -215,6 +238,7 @@
     flex: 2;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .result-list .card-info .left-side,
@@ -265,6 +289,10 @@
     vertical-align: middle;
     color: #4F4F4F;
     margin-bottom: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .result-list .card-info .rating .stars {
@@ -279,6 +307,7 @@
         #0005 70%, /* {rating * 20} % */
         #0005 100%
     );
+    z-index: -1;
 }
 
 .star {
@@ -303,7 +332,6 @@
     padding-right: 18px;
     padding-bottom: 10px;
     padding-left: 18px;
-    font-family: SF Pro Display;
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
@@ -311,25 +339,35 @@
     margin-top: auto;
 }
 
-.result-list .card-info .offer {
+.btn-mobile {
+    display: none;
+}
+
+.result-list .card-info .badges {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.result-list .card-info .right-side .offer {
     background: #EB5757;
     text-wrap: nowrap;
 }
 
 
-.result-list .card-info .price {
-    display: flex;
-    flex-direction: column;
+.result-list .card-info .right-side {
     align-items: flex-end;
-    margin-top: auto;
+    justify-content: flex-end;
 }
 
-.result-list .card-info .price .discount {
+.result-list .card-info .right-side .discount {
     background: #219653;
     margin-bottom: 6px;
 }
 
-.result-list .card-info .price .details {
+.result-list .card-info .right-side .details {
     font-weight: 300;
     font-size: 14px;
     line-height: 100%;
@@ -340,7 +378,7 @@
     margin-bottom: 6px;
 }
 
-.result-list .card-info .price .amount {
+.result-list .card-info .right-side .amount {
     font-weight: 500;
     font-style: Medium;
     font-size: 20px;
@@ -351,12 +389,12 @@
     margin-bottom: 6px;
 }
 
-.result-list .card-info .price .prev-amount {
+.result-list .card-info .right-side .prev-amount {
     font-size: 14px;
     color: #EB5757;
 }
 
-.result-list .card-info .price .current-amount {
+.result-list .card-info .right-side .current-amount {
     font-size: 20px;
     color: #333333;;
 }
@@ -424,5 +462,74 @@
 
     .filter-list-item .count {
         display: none;
+    }
+}
+
+/* ==================================== */
+/* ====== Media Queries (Tablet) ====== */
+/* ==================================== */
+
+@media (max-width: 790px) {
+    .search-result {
+        flex-direction: column;
+    }
+
+    .btn-filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-collapse {
+        display: block;
+    }
+
+    .filter {
+        padding: 0px 20px;
+        background: #FBFBFB;
+        position: fixed;
+        top:  100%;
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+        overflow-y: auto;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        transition: top 0.5s ease;
+    }
+
+    .filter-card {
+        max-width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .sort-and-filter-bar .btn-group {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sort-and-filter-bar .btn-group .btn-group-item {
+        font-size: 12px;
+    }
+
+    .result-list .card-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .result-list .card-info .btn-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .result-list .card-info .left-side .btn {
+        display: none;
+    }
+
+    .result-list .card-info .badges {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
     }
 }

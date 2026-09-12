@@ -137,7 +137,18 @@
 
 <!-- Search -->
 <main class="search-result container">
+    <button class="btn btn-filter btn-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+            <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <span>Filters</span>
+    </button>
     <section class="filter">
+        <div class="btn-mobile btn-collapse">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+            </svg>
+        </div>
         <div class="filter-card filter-search">
             <div class="filter-card-header">
                 <h3>Search by property name</h3>
@@ -324,20 +335,20 @@
                         <h4 class="subtitle">Live a little and celbrate with champagne</h4>
                         <p class="desc">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
                         <button class="btn">See Availability</button>
-
                     </div>
                     <div class="right-side">
-                        <span class="offer badge">Book now and receive 15% off</span>
-                        <div class="price">
+                        <div class="badges">
+                            <span class="offer badge">Book now and receive 15% off</span>
                             <span class="badge discount">5% off</span>
-                            <p class="details">1 room 2 days</p>
-                            <div class="amount">
-                                <s class="prev-amount">$150</s>
-                                <span class="current-amount">$130</span>
-                            </div>
-                            <p class="tax-msg">Includes taxes and fees</p>
                         </div>
+                        <p class="details">1 room 2 days</p>
+                        <div class="amount">
+                            <s class="prev-amount">$150</s>
+                            <span class="current-amount">$130</span>
+                        </div>
+                        <p class="tax-msg">Includes taxes and fees</p>
                     </div>
+                    <button class="btn btn-mobile">See Availability</button>
                 </div>
             </div>
             <div class="card card-row">
@@ -360,20 +371,20 @@
                         <h4 class="subtitle">Live a little and celbrate with champagne</h4>
                         <p class="desc">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
                         <button class="btn">See Availability</button>
-
                     </div>
                     <div class="right-side">
-                        <span class="offer badge">Book now and receive 15% off</span>
-                        <div class="price">
+                        <div class="badges">
+                            <span class="offer badge">Book now and receive 15% off</span>
                             <span class="badge discount">5% off</span>
-                            <p class="details">1 room 2 days</p>
-                            <div class="amount">
-                                <s class="prev-amount">$150</s>
-                                <span class="current-amount">$130</span>
-                            </div>
-                            <p class="tax-msg">Includes taxes and fees</p>
                         </div>
+                        <p class="details">1 room 2 days</p>
+                        <div class="amount">
+                            <s class="prev-amount">$150</s>
+                            <span class="current-amount">$130</span>
+                        </div>
+                        <p class="tax-msg">Includes taxes and fees</p>
                     </div>
+                    <button class="btn btn-mobile">See Availability</button>
                 </div>
             </div>
             <div class="card card-row">
@@ -396,92 +407,20 @@
                         <h4 class="subtitle">Live a little and celbrate with champagne</h4>
                         <p class="desc">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
                         <button class="btn">See Availability</button>
-
                     </div>
                     <div class="right-side">
-                        <span class="offer badge">Book now and receive 15% off</span>
-                        <div class="price">
+                        <div class="badges">
+                            <span class="offer badge">Book now and receive 15% off</span>
                             <span class="badge discount">5% off</span>
-                            <p class="details">1 room 2 days</p>
-                            <div class="amount">
-                                <s class="prev-amount">$150</s>
-                                <span class="current-amount">$130</span>
-                            </div>
-                            <p class="tax-msg">Includes taxes and fees</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-row">
-                <div class="card card-img">
-                    <img src="res/img/australia.png" alt="">
-                </div>
-                <div class="card-info">
-                    <div class="left-side">
-                        <h2 class="title">Lakeside Motel Warefront</h2>
-                        <div class="rating">
-                            <div class="stars">
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                            </div>
-                            <span class="amount">3.5 (1200 Reviews)</span>
+                        <p class="details">1 room 2 days</p>
+                        <div class="amount">
+                            <s class="prev-amount">$150</s>
+                            <span class="current-amount">$130</span>
                         </div>
-                        <h4 class="subtitle">Live a little and celbrate with champagne</h4>
-                        <p class="desc">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
-                        <button class="btn">See Availability</button>
-
+                        <p class="tax-msg">Includes taxes and fees</p>
                     </div>
-                    <div class="right-side">
-                        <!-- <span class="offer badge">Book now and receive 15% off</span> -->
-                        <div class="price">
-                            <span class="badge discount">5% off</span>
-                            <p class="details">1 room 2 days</p>
-                            <div class="amount">
-                                <s class="prev-amount">$150</s>
-                                <span class="current-amount">$130</span>
-                            </div>
-                            <p class="tax-msg">Includes taxes and fees</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-row">
-                <div class="card card-img">
-                    <img src="res/img/australia.png" alt="">
-                </div>
-                <div class="card-info">
-                    <div class="left-side">
-                        <h2 class="title">Lakeside Motel Warefront</h2>
-                        <div class="rating">
-                            <div class="stars">
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                                <div class="star"><img src="res/icon/star.png" alt=""></div>
-                            </div>
-                            <span class="amount">3.5 (1200 Reviews)</span>
-                        </div>
-                        <h4 class="subtitle">Live a little and celbrate with champagne</h4>
-                        <p class="desc">Reats include a glass of French champagne, parking and a late checkout. Gym included. Flexible cancellation applies</p>
-                        <button class="btn">See Availability</button>
-
-                    </div>
-                    <div class="right-side">
-                        <span class="offer badge">Book now and receive 15% off</span>
-                        <div class="price">
-                            <span class="badge discount">5% off</span>
-                            <p class="details">1 room 2 days</p>
-                            <div class="amount">
-                                <s class="prev-amount">$150</s>
-                                <span class="current-amount">$130</span>
-                            </div>
-                            <p class="tax-msg">Includes taxes and fees</p>
-                        </div>
-                    </div>
+                    <button class="btn btn-mobile">See Availability</button>
                 </div>
             </div>
         </div>
