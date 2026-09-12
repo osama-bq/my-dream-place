@@ -580,6 +580,9 @@ img {
     letter-spacing: 2%;
     color: #1B1F2D;
     margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .footer-links .brand-link small {
