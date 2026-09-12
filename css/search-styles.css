@@ -533,3 +533,37 @@
         gap: 8px;
     }
 }
+
+/* ==================================== */
+/* ==== Media Queries (Smartphone) ==== */
+/* ==================================== */
+
+@media (max-width: 495px) {
+    .sort-and-filter-bar .btn-group {
+        display: none;
+    }
+
+    .result-list .card-info .right-side {
+        align-items: flex-start;
+    }
+
+    .result-list .card-info .desc {
+        display: none;
+    }
+
+    .badge {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 2%;
+        background: var(--btn-primary);
+        color: #FFFFFF;
+        padding: 2px 6px;
+        border-radius: 5px;
+    }
+
+    .result-list .card-info .tax-msg,
+    .result-list .card-info .right-side .details {
+        font-size: 12px;
+    }
+}
