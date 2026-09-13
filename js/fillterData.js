@@ -1,6 +1,16 @@
 // Reset
 function resetFilters() {
     renderData(properties.slice(0, SHOW_INITIAL));
+    showEndOfList(properties.length);
+}
+
+function filterByPropertyName(arr) {
+    const suffix = searchInput.value.trim().toLowerCase();
+    return arr.filter(({name}) => {
+        return name.toLowerCase().split(' ').find(word => word.startsWith(suffix))
+            || name.toLowerCase().indexOf(suffix) === 0
+            || name.toLowerCase().includes(' ' + suffix);
+    });
 }
 
 function filterByPropertyType(arr) {
@@ -61,7 +71,7 @@ function filterByActivities(arr) {
 // Main filter function
 var cached = null;
 var lastFilter = null;
-const filterFuncs = [filterByBudget, filterByRating, filterByPopularFilters, filterByActivities, filterByPropertyType];
+const filterFuncs = [filterByPropertyName, filterByBudget, filterByRating, filterByPopularFilters, filterByActivities, filterByPropertyType];
 
 function filter(func) {
     console.log(`Filtering CALLED by ${func.name}...`);
@@ -84,6 +94,13 @@ function filter(func) {
     renderData(filtered.slice(0, SHOW_INITIAL));
     showEndOfList(filtered.length);
 }
+
+
+// Filter by property name
+const searchInput = document.querySelector('.filter-search input');
+searchInput.addEventListener('input', () => {
+    filter(filterByPropertyName);
+});
 
 // Property type filtering
 const propertyTypeBtnGroup = document.querySelector('.sort-and-filter-bar .btn-group');
