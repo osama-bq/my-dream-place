@@ -25,9 +25,8 @@ function filterByBudget(arr) {
     });
 }
 
-function filterByRating(minRating, arr) {
-    console.log(minRating);
-    return arr.filter(({rating}) => rating.score >= minRating);
+function filterByRating(arr) {
+    return arr.filter(({rating}) => rating.score >= Number.parseFloat(ratingBtnGroup.dataset['selected']) + 1);
 }
 
 function filterByPopularFilters(arr) {
@@ -58,14 +57,30 @@ function filterByActivities(arr) {
     });
 }
 
-function filter(params) {
-    console.log(params);
-    let filtered = filterByBudget(properties); console.log(filtered);
-    if ('selected' in ratingBtnGroup.dataset)
-        filtered = filterByRating(Number.parseInt(ratingBtnGroup.dataset['selected']) + 1, filtered); console.log(filtered);
-    filtered = filterByPopularFilters(filtered); console.log(filtered);
-    filtered = filterByActivities(filtered); console.log(filtered);
-    filtered = filterByPropertyType(filtered); console.log(filtered);
+
+// Main filter function
+var cached = null;
+var lastFilter = null;
+const filterFuncs = [filterByBudget, filterByRating, filterByPopularFilters, filterByActivities, filterByPropertyType];
+
+function filter(func) {
+    console.log(`Filtering CALLED by ${func.name}...`);
+    if (lastFilter !== func) {
+        cached = [...properties];
+        console.log(cached);
+        filterFuncs.forEach(f => {
+            if (f === func) return;
+            cached = f(cached);
+            console.log(`Filtering by ${f.name}...`);
+            console.log(cached);
+        });
+        lastFilter = func;
+    }
+
+    let filtered = func(cached);
+    console.log(`Filtering by ${func.name}...`);
+    console.log(filtered);
+    
     renderData(filtered.slice(0, SHOW_INITIAL));
     showEndOfList(filtered.length);
 }
@@ -79,7 +94,7 @@ Array.from(propertyTypeBtnGroup.children).forEach((btn, idx) => btn.addEventList
     propertyTypeBtnGroup.dataset['selected'] = idx;
     btn.classList.add('selected');
 
-    filter();
+    filter(filterByPropertyType);
 }));
 
 // Budget-based filtering
@@ -90,21 +105,22 @@ const p1000_2000 = document.getElementById('price-1000-2000');
 const p2000_5000 = document.getElementById('price-2000-5000');
 
 
-p0_200.addEventListener('change', filter);
-p200_500.addEventListener('change', filter);
-p500_1000.addEventListener('change', filter);
-p1000_2000.addEventListener('change', filter);
-p2000_5000.addEventListener('change', filter);
+p0_200.addEventListener('change', () => filter(filterByBudget));
+p200_500.addEventListener('change', () => filter(filterByBudget));
+p500_1000.addEventListener('change', () => filter(filterByBudget));
+p1000_2000.addEventListener('change', () => filter(filterByBudget));
+p2000_5000.addEventListener('change', () => filter(filterByBudget));
 
 // Rating-based filtering
 const ratingBtnGroup = document.querySelector('.filter-rating .btn-group');
+ratingBtnGroup.dataset['selected'] = -1;
 Array.from(ratingBtnGroup.children).forEach((btn, idx) => btn.addEventListener('click', () => {
-    if ('selected' in ratingBtnGroup.dataset)
+    if (ratingBtnGroup.dataset['selected'] !== '-1')
         ratingBtnGroup.children[ratingBtnGroup.dataset['selected']].classList.remove('selected');
     ratingBtnGroup.dataset['selected'] = idx;
     btn.classList.add('selected');
 
-    filter();
+    filter(filterByRating);
 }));
 
 // Popular Filters
@@ -115,12 +131,12 @@ const pfHotTubJacuzzi = document.getElementById('hot-tub-jacuzzi');
 const pfBookWithoutCreditCard = document.getElementById('book-without-credit-card');
 const pfNoPrepayment = document.getElementById('no-prepayment');
 
-pfFreeCancellation.addEventListener('change', filter);
-pfSpa.addEventListener('change', filter);
-pfBeachFront.addEventListener('change', filter);
-pfHotTubJacuzzi.addEventListener('change', filter);
-pfBookWithoutCreditCard.addEventListener('change', filter);
-pfNoPrepayment.addEventListener('change', filter);
+pfFreeCancellation.addEventListener('change', () => filter(filterByPopularFilters));
+pfSpa.addEventListener('change', () => filter(filterByPopularFilters));
+pfBeachFront.addEventListener('change', () => filter(filterByPopularFilters));
+pfHotTubJacuzzi.addEventListener('change', () => filter(filterByPopularFilters));
+pfBookWithoutCreditCard.addEventListener('change', () => filter(filterByPopularFilters));
+pfNoPrepayment.addEventListener('change', () => filter(filterByPopularFilters));
 
 
 // Activites-based filtering
@@ -131,9 +147,9 @@ const aCycling = document.getElementById('cycling');
 const aSauna = document.getElementById('sauna');
 const aNightLights = document.getElementById('night-lights');
 
-aFishing.addEventListener('change', filter);
-aHiking.addEventListener('change', filter);
-aBeach.addEventListener('change', filter);
-aCycling.addEventListener('change', filter);
-aSauna.addEventListener('change', filter);
-aNightLights.addEventListener('change', filter);
+aFishing.addEventListener('change', () => filter(filterByActivities));
+aHiking.addEventListener('change', () => filter(filterByActivities));
+aBeach.addEventListener('change', () => filter(filterByActivities));
+aCycling.addEventListener('change', () => filter(filterByActivities));
+aSauna.addEventListener('change', () => filter(filterByActivities));
+aNightLights.addEventListener('change', () => filter(filterByActivities));
