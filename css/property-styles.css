@@ -1,4 +1,13 @@
+body {
+    background: #F4F4F4;
+}
+
 /* Gallery */
+.gallery {
+    background: linear-gradient(180deg, rgba(244, 244, 244, 0) 0%, #FFFFFF 100%);
+    padding: 24px 0;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -21,4 +30,31 @@
 
 .primary-image {
     grid-row: span 2;
+}
+
+/* Tabs Bar */
+.tabs-bar {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px 0px #E0E0E0;
+    padding-top: 6px;
+}
+
+.tabs {
+    display: flex;
+    gap: 14px;
+}
+
+.tab {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #333333;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 3px solid var(--btn-primary);
 }
