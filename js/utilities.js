@@ -1,6 +1,21 @@
 // constants and global variables
 const SHOW_INITIAL = 5;
 const CURRENCY_SIGN = {'USD': '$'};
+
+const loadData = fetch('../data/properties.json')
+    .then(res => res.json())
+    .then(json => {
+        properties = [...json['properties']];
+        return json['properties'];
+    });
+
+const domReady = new Promise((resolve) => {
+    if (document.readyState === 'loading')
+        document.addEventListener('DOMContentLoaded', resolve);
+    else
+        resolve();
+});
+
 var properties = [];
 var filtered = [...properties];
 
@@ -21,6 +36,7 @@ function renderData(filteredData) {
 
     filteredData.forEach(result => {
         const {
+            id,
             name,
             rating,
             pricing,
@@ -41,8 +57,10 @@ function renderData(filteredData) {
         const discount = rowTemplate.querySelector('.badges .discount');
         const details = rowTemplate.querySelector('.right-side .details');
         const taxes = rowTemplate.querySelector('.tax-msg');
+        const inputId = rowTemplate.querySelector('#property-id');
 
 
+        inputId.value = id;
         thumbnail.src = `${content.images[0]}`;
         title.innerText = name;
         ratingAmount.innerText = rating.score;

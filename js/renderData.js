@@ -1,17 +1,3 @@
-const loadData = fetch('../data/properties.json')
-    .then(res => res.json())
-    .then(json => {
-        properties = [...json['properties']];
-        return json['properties'];
-    });
-
-const domReady = new Promise((resolve) => {
-    if (document.readyState === 'loading')
-        document.addEventListener('DOMContentLoaded', resolve);
-    else
-        resolve();
-});
-
 function render([data,]) {
     const params = new URLSearchParams(window.location.search);
     const location = params.get('location').trim();
