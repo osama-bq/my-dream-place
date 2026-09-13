@@ -1,0 +1,86 @@
+// constants and global variables
+const SHOW_INITIAL = 5;
+const CURRENCY_SIGN = {'USD': '$'};
+var properties = [];
+
+const resultList = document.querySelector('.result-list');
+var rowTemplate = document.querySelector('.card-row');
+
+// functions
+function renderData(filteredData) {
+    function calcDiscount(original, discounted) {
+        original = Number.parseFloat(original);
+        discounted = Number.parseFloat(discounted);
+        return Math.round(
+            100 * (original - discounted) / original
+        );
+    }
+
+    resultList.innerHTML = ''; // clear everything inside
+
+    filteredData.forEach(result => {
+        const {
+            name,
+            rating,
+            pricing,
+            content
+        } = result;
+
+        const thumbnail = rowTemplate.querySelector('.card-img img');
+        const title = rowTemplate.querySelector('.title');
+        const ratingAmount = rowTemplate.querySelector('.rating .amount');
+        const reviews = rowTemplate.querySelector('.rating .reviews');
+        const subtitle = rowTemplate.querySelector('.subtitle');
+        const desc = rowTemplate.querySelector('.desc');
+
+        const price = rowTemplate.querySelector('.amount .current-amount');
+        const prevPrice = rowTemplate.querySelector('.amount .prev-amount');
+        const offer = rowTemplate.querySelector('.badges .offer');
+        const discount = rowTemplate.querySelector('.badges .discount');
+        const details = rowTemplate.querySelector('.right-side .details');
+        const taxes = rowTemplate.querySelector('.tax-msg');
+
+
+        thumbnail.src = `${content.images[0]}`;
+        title.innerText = name;
+        ratingAmount.innerText = rating.score;
+        reviews.innerText = rating.reviews;
+        subtitle.innerText = content.shortDescription;
+        desc.innerText = content.fullOverview;
+
+        price.innerText = CURRENCY_SIGN[pricing.currency] + pricing.totalDiscountedPrice;
+        prevPrice.innerText = CURRENCY_SIGN[pricing.currency] + pricing.totalOriginalPrice;
+        discount.innerText = `${calcDiscount(pricing.totalOriginalPrice, pricing.totalDiscountedPrice)}% off`
+        if (pricing.tags.length) {
+            offer.style.visibility = 'show';
+            offer.innerText = pricing.tags[0];
+        } else {
+            offer.style.visibility = 'hidden';
+        }
+
+        details.innerText = pricing.bookingDuration;
+        if (!pricing.includeTaxesAndFees)
+            taxes.classList.add('hidden');
+        else
+            taxes.classList.remove('hidden');
+
+        resultList.appendChild(rowTemplate);
+        if (resultList.childElementCount < filteredData.length)
+            rowTemplate = rowTemplate.cloneNode(true);
+    });
+
+    Array.from(resultList.children).forEach(element => element.classList.remove('hidden'));
+}
+
+function showEndOfList(len) {
+    const divider = document.querySelector('.load-more .divider');
+    const loadMoreBtn = document.querySelector('.load-more .btn');
+    if (len <= SHOW_INITIAL) {
+        divider.innerHTML = `<span>${len? 'End of results' : 'No results to show'}</span>`;
+        divider.classList.remove('hidden');
+        loadMoreBtn.classList.add('hidden')
+    } else {
+        loadMoreBtn.classList.remove('hidden');
+        divider.classList.add('hidden');
+    }
+}

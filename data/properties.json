@@ -1,0 +1,403 @@
+{
+  "properties": [
+    {
+      "id": "p_1001",
+      "name": "Lakeside Motel Waterfront",
+      "propertyType": "Hotel",
+      "location": { "address": "Lorem ipsum road, Tantruim-2322", "city": "Melbourne", "country": "Australia" },
+      "rating": { "score": 4.5, "reviews": 1200, "couplesScore": 9.2 },
+      "pricing": { "currency": "USD", "pricePerNight": 65, "totalOriginalPrice": 150, "totalDiscountedPrice": 130, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Book now and receive 15% off"] },
+      "content": {
+        "images": ["/res/img/properties/p_1001_1.jpg", "/res/img/properties/p_1001_2.jpg", "/res/img/properties/p_1001_3.jpg"],
+        "shortDescription": "Live a little and celebrate with champagne.",
+        "fullOverview": "Featuring free WiFi throughout the property, Lakeside Motel offers accommodations in Lakes Entrance."
+      },
+      "filterableAttributes": {
+        "budgetTier": 200,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": true, "noPrepayment": false },
+        "activities": ["Fishing", "Beach"],
+        "amenities": ["Free WiFi", "Private parking", "Air conditioning"]
+      }
+    },
+    {
+      "id": "p_1002",
+      "name": "Oceanview Resort & Spa",
+      "propertyType": "Resort",
+      "location": { "address": "12 Coastline Blvd", "city": "Gold Coast", "country": "Australia" },
+      "rating": { "score": 5.0, "reviews": 3400, "couplesScore": 9.8 },
+      "pricing": { "currency": "USD", "pricePerNight": 450, "totalOriginalPrice": 1000, "totalDiscountedPrice": 900, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Breakfast included"] },
+      "content": {
+        "images": ["/res/img/properties/p_1002_1.jpg", "/res/img/properties/p_1002_2.jpg", "/res/img/properties/p_1002_3.jpg"],
+        "shortDescription": "Luxury beachfront living with world-class spa facilities.",
+        "fullOverview": "Experience unparalleled luxury right on the beach. Perfect for romantic getaways."
+      },
+      "filterableAttributes": {
+        "budgetTier": 1000,
+        "popularFilters": { "freeCancellation": false, "spa": true, "beachFront": true, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Beach", "Sauna"],
+        "amenities": ["Pool", "Spa", "Room service"]
+      }
+    },
+    {
+      "id": "p_1003",
+      "name": "Mountain High Cabin",
+      "propertyType": "Shared Space",
+      "location": { "address": "88 Alpine Way", "city": "Blue Mountains", "country": "Australia" },
+      "rating": { "score": 4.2, "reviews": 450, "couplesScore": 8.5 },
+      "pricing": { "currency": "USD", "pricePerNight": 110, "totalOriginalPrice": 250, "totalDiscountedPrice": 220, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": [] },
+      "content": {
+        "images": ["/res/img/properties/p_1003_1.jpg", "/res/img/properties/p_1003_2.jpg", "/res/img/properties/p_1003_3.jpg"],
+        "shortDescription": "Cozy shared cabin with spectacular valley views.",
+        "fullOverview": "Wake up to misty mountains. Ideal for hikers and nature lovers looking for a rustic experience."
+      },
+      "filterableAttributes": {
+        "budgetTier": 500,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": true, "noPrepayment": true },
+        "activities": ["Hiking", "Cycling"],
+        "amenities": ["Kitchen", "Fireplace", "Heating"]
+      }
+    },
+    {
+      "id": "p_1004",
+      "name": "Downtown Central Apartments",
+      "propertyType": "Hotel and apartments",
+      "location": { "address": "400 George St", "city": "Sydney", "country": "Australia" },
+      "rating": { "score": 3.8, "reviews": 2100, "couplesScore": 7.9 },
+      "pricing": { "currency": "USD", "pricePerNight": 85, "totalOriginalPrice": 200, "totalDiscountedPrice": 170, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["City center"] },
+      "content": {
+        "images": ["/res/img/properties/p_1004_1.jpg", "/res/img/properties/p_1004_2.jpg", "/res/img/properties/p_1004_3.jpg"],
+        "shortDescription": "Affordable stays right in the heart of the business district.",
+        "fullOverview": "Perfect for quick city visits. Close to public transit and major landmarks."
+      },
+      "filterableAttributes": {
+        "budgetTier": 200,
+        "popularFilters": { "freeCancellation": false, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Night lights"],
+        "amenities": ["Free WiFi", "Elevator", "Air conditioning"]
+      }
+    },
+    {
+      "id": "p_1005",
+      "name": "The Royal Palace Hotel",
+      "propertyType": "Hotel",
+      "location": { "address": "1 King Square", "city": "Melbourne", "country": "Australia" },
+      "rating": { "score": 4.9, "reviews": 5600, "couplesScore": 9.5 },
+      "pricing": { "currency": "USD", "pricePerNight": 1200, "totalOriginalPrice": 2500, "totalDiscountedPrice": 2400, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["VIP Access"] },
+      "content": {
+        "images": ["/res/img/properties/p_1005_1.jpg", "/res/img/properties/p_1005_2.jpg", "/res/img/properties/p_1005_3.jpg"],
+        "shortDescription": "Five-star luxury with panoramic city skyline views.",
+        "fullOverview": "The pinnacle of urban luxury. Features a rooftop pool, three Michelin-star restaurants, and personalized butler service."
+      },
+      "filterableAttributes": {
+        "budgetTier": 5000,
+        "popularFilters": { "freeCancellation": true, "spa": true, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Night lights", "Sauna"],
+        "amenities": ["Rooftop Pool", "Gym", "Valet Parking"]
+      }
+    },
+    {
+      "id": "p_1006",
+      "name": "Riverfront Budget Inn",
+      "propertyType": "Residence",
+      "location": { "address": "12 Yarra Blvd", "city": "Melbourne", "country": "Australia" },
+      "rating": { "score": 2.5, "reviews": 320, "couplesScore": 5.0 },
+      "pricing": { "currency": "USD", "pricePerNight": 40, "totalOriginalPrice": 90, "totalDiscountedPrice": 80, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": [] },
+      "content": {
+        "images": ["/res/img/properties/p_1006_1.jpg", "/res/img/properties/p_1006_2.jpg", "/res/img/properties/p_1006_3.jpg"],
+        "shortDescription": "No-frills accommodation for the budget-conscious traveler.",
+        "fullOverview": "Basic amenities located right next to the river. Great for backpackers."
+      },
+      "filterableAttributes": {
+        "budgetTier": 200,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": true, "noPrepayment": true },
+        "activities": ["Fishing", "Cycling"],
+        "amenities": ["Shared bathroom", "Vending machines"]
+      }
+    },
+    {
+      "id": "p_1007",
+      "name": "Coral Reef Resort",
+      "propertyType": "Resort",
+      "location": { "address": "77 Barrier Reef Dr", "city": "Cairns", "country": "Australia" },
+      "rating": { "score": 4.7, "reviews": 1800, "couplesScore": 9.0 },
+      "pricing": { "currency": "USD", "pricePerNight": 350, "totalOriginalPrice": 750, "totalDiscountedPrice": 700, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Scuba diving included"] },
+      "content": {
+        "images": ["/res/img/properties/p_1007_1.jpg", "/res/img/properties/p_1007_2.jpg", "/res/img/properties/p_1007_3.jpg"],
+        "shortDescription": "Step right out into the Great Barrier Reef.",
+        "fullOverview": "Eco-friendly resort focusing on marine life preservation and luxury stays."
+      },
+      "filterableAttributes": {
+        "budgetTier": 1000,
+        "popularFilters": { "freeCancellation": false, "spa": true, "beachFront": true, "hotTubJacuzzi": false, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Beach", "Fishing"],
+        "amenities": ["Private beach", "Restaurant", "Airport shuttle"]
+      }
+    },
+    {
+      "id": "p_1008",
+      "name": "Outback Oasis",
+      "propertyType": "Residence",
+      "location": { "address": "Route 66 Desert Highway", "city": "Alice Springs", "country": "Australia" },
+      "rating": { "score": 4.1, "reviews": 600, "couplesScore": 8.8 },
+      "pricing": { "currency": "USD", "pricePerNight": 140, "totalOriginalPrice": 300, "totalDiscountedPrice": 280, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": false, "tags": ["Remote getaway"] },
+      "content": {
+        "images": ["/res/img/properties/p_1008_1.jpg", "/res/img/properties/p_1008_2.jpg", "/res/img/properties/p_1008_3.jpg"],
+        "shortDescription": "A hidden gem in the middle of the desert.",
+        "fullOverview": "Experience the outback safely and comfortably. Stargazing is a must here."
+      },
+      "filterableAttributes": {
+        "budgetTier": 500,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": true, "noPrepayment": false },
+        "activities": ["Hiking", "Night lights"],
+        "amenities": ["Air conditioning", "Outdoor pool", "BBQ area"]
+      }
+    },
+    {
+      "id": "p_1009",
+      "name": "Seaside Shared Villas",
+      "propertyType": "Shared Space",
+      "location": { "address": "42 Ocean Drive", "city": "Byron Bay", "country": "Australia" },
+      "rating": { "score": 3.9, "reviews": 890, "couplesScore": 8.0 },
+      "pricing": { "currency": "USD", "pricePerNight": 60, "totalOriginalPrice": 140, "totalDiscountedPrice": 120, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Surfer favorite"] },
+      "content": {
+        "images": ["/res/img/properties/p_1009_1.jpg", "/res/img/properties/p_1009_2.jpg", "/res/img/properties/p_1009_3.jpg"],
+        "shortDescription": "Community living right on the surf breaks.",
+        "fullOverview": "Meet fellow travelers, surf all day, and relax in our communal hammocks."
+      },
+      "filterableAttributes": {
+        "budgetTier": 200,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": true, "hotTubJacuzzi": false, "bookWithoutCreditCard": true, "noPrepayment": true },
+        "activities": ["Beach", "Cycling"],
+        "amenities": ["Shared Kitchen", "Surfboard rental", "Free WiFi"]
+      }
+    },
+    {
+      "id": "p_1010",
+      "name": "The Grand Victorian",
+      "propertyType": "Hotel",
+      "location": { "address": "1880 Heritage Ave", "city": "Adelaide", "country": "Australia" },
+      "rating": { "score": 4.6, "reviews": 1100, "couplesScore": 9.4 },
+      "pricing": { "currency": "USD", "pricePerNight": 260, "totalOriginalPrice": 550, "totalDiscountedPrice": 520, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Historic Property"] },
+      "content": {
+        "images": ["/res/img/properties/p_1010_1.jpg", "/res/img/properties/p_1010_2.jpg", "/res/img/properties/p_1010_3.jpg"],
+        "shortDescription": "Step back in time in this meticulously restored 19th-century hotel.",
+        "fullOverview": "Enjoy classical elegance with modern conveniences. Antique furnishings in every room."
+      },
+      "filterableAttributes": {
+        "budgetTier": 1000,
+        "popularFilters": { "freeCancellation": false, "spa": true, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Night lights"],
+        "amenities": ["Library", "Fine Dining", "Concierge"]
+      }
+    },
+    {
+      "id": "p_1011",
+      "name": "Eco Treehouse Retreat",
+      "propertyType": "Residence",
+      "location": { "address": "Canopy Lane", "city": "Daintree", "country": "Australia" },
+      "rating": { "score": 4.8, "reviews": 400, "couplesScore": 9.7 },
+      "pricing": { "currency": "USD", "pricePerNight": 320, "totalOriginalPrice": 650, "totalDiscountedPrice": 640, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Receive 30% discount on a restaurant"] },
+      "content": {
+        "images": ["/res/img/properties/p_1011_1.jpg", "/res/img/properties/p_1011_2.jpg", "/res/img/properties/p_1011_3.jpg"],
+        "shortDescription": "Sleep among the birds in a luxury rainforest canopy.",
+        "fullOverview": "100% solar powered treehouses offering absolute privacy and rainforest immersion."
+      },
+      "filterableAttributes": {
+        "budgetTier": 1000,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Hiking"],
+        "amenities": ["Outdoor shower", "Balcony", "Organic breakfast"]
+      }
+    },
+    {
+      "id": "p_1012",
+      "name": "Bayside Corporate Apartments",
+      "propertyType": "Hotel and apartments",
+      "location": { "address": "99 Business Park Dr", "city": "Melbourne", "country": "Australia" },
+      "rating": { "score": 4.0, "reviews": 850, "couplesScore": 7.5 },
+      "pricing": { "currency": "USD", "pricePerNight": 190, "totalOriginalPrice": 400, "totalDiscountedPrice": 380, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Long stay discount"] },
+      "content": {
+        "images": ["/res/img/properties/p_1012_1.jpg", "/res/img/properties/p_1012_2.jpg", "/res/img/properties/p_1012_3.jpg"],
+        "shortDescription": "Spacious, fully-equipped apartments for professionals.",
+        "fullOverview": "Ideal for business travelers needing a home away from home with dedicated workspaces."
+      },
+      "filterableAttributes": {
+        "budgetTier": 500,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Night lights", "Cycling"],
+        "amenities": ["Gym", "High-speed WiFi", "In-room laundry"]
+      }
+    },
+    {
+      "id": "p_1013",
+      "name": "Whispering Pines Lodge",
+      "propertyType": "Resort",
+      "location": { "address": "15 Forest Trail", "city": "Hobart", "country": "Australia" },
+      "rating": { "score": 4.4, "reviews": 920, "couplesScore": 8.9 },
+      "pricing": { "currency": "USD", "pricePerNight": 175, "totalOriginalPrice": 400, "totalDiscountedPrice": 350, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": false, "tags": ["Family friendly"] },
+      "content": {
+        "images": ["/res/img/properties/p_1013_1.jpg", "/res/img/properties/p_1013_2.jpg", "/res/img/properties/p_1013_3.jpg"],
+        "shortDescription": "Quiet lodge surrounded by ancient pine forests.",
+        "fullOverview": "A tranquil escape featuring log cabins, guided nature walks, and evening campfires."
+      },
+      "filterableAttributes": {
+        "budgetTier": 500,
+        "popularFilters": { "freeCancellation": false, "spa": true, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Hiking", "Sauna"],
+        "amenities": ["Fire pit", "Restaurant", "Bicycle rental"]
+      }
+    },
+    {
+      "id": "p_1014",
+      "name": "Platinum Sky Suites",
+      "propertyType": "Hotel and apartments",
+      "location": { "address": "Level 88, Skytower", "city": "Sydney", "country": "Australia" },
+      "rating": { "score": 4.9, "reviews": 3100, "couplesScore": 9.6 },
+      "pricing": { "currency": "USD", "pricePerNight": 850, "totalOriginalPrice": 1800, "totalDiscountedPrice": 1700, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Exclusive"] },
+      "content": {
+        "images": ["/res/img/properties/p_1014_1.jpg", "/res/img/properties/p_1014_2.jpg", "/res/img/properties/p_1014_3.jpg"],
+        "shortDescription": "Penthouse living with 360-degree views of the harbor.",
+        "fullOverview": "Ultra-modern suites offering the highest viewpoint in the city. Helicopter transfers available."
+      },
+      "filterableAttributes": {
+        "budgetTier": 2000,
+        "popularFilters": { "freeCancellation": true, "spa": true, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Night lights"],
+        "amenities": ["Helipad", "Private Chef", "Infinity Pool"]
+      }
+    },
+    {
+      "id": "p_1015",
+      "name": "Sunset Backpacker Hostel",
+      "propertyType": "Shared Space",
+      "location": { "address": "4 Backpacker Lane", "city": "Darwin", "country": "Australia" },
+      "rating": { "score": 3.4, "reviews": 1500, "couplesScore": 6.5 },
+      "pricing": { "currency": "USD", "pricePerNight": 25, "totalOriginalPrice": 60, "totalDiscountedPrice": 50, "bookingDuration": "1 bed 2 days", "includesTaxesAndFees": true, "tags": ["Cheapest in town"] },
+      "content": {
+        "images": ["/res/img/properties/p_1015_1.jpg", "/res/img/properties/p_1015_2.jpg", "/res/img/properties/p_1015_3.jpg"],
+        "shortDescription": "Vibrant party hostel with nightly events.",
+        "fullOverview": "If you want to meet people and party, this is the place. Includes a busy onsite bar."
+      },
+      "filterableAttributes": {
+        "budgetTier": 200,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": true, "noPrepayment": true },
+        "activities": ["Night lights", "Beach"],
+        "amenities": ["Bar", "Lockers", "Shared lounge"]
+      }
+    },
+    {
+      "id": "p_1016",
+      "name": "The Vineyard Estate",
+      "propertyType": "Residence",
+      "location": { "address": "Wine Country Rd", "city": "Barossa Valley", "country": "Australia" },
+      "rating": { "score": 4.8, "reviews": 750, "couplesScore": 9.8 },
+      "pricing": { "currency": "USD", "pricePerNight": 400, "totalOriginalPrice": 850, "totalDiscountedPrice": 800, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": true, "tags": ["Wine tasting included"] },
+      "content": {
+        "images": ["/res/img/properties/p_1016_1.jpg", "/res/img/properties/p_1016_2.jpg", "/res/img/properties/p_1016_3.jpg"],
+        "shortDescription": "Stay right on a working vineyard.",
+        "fullOverview": "Wake up to rolling hills of grapes. Daily complimentary wine tasting and cellar tours."
+      },
+      "filterableAttributes": {
+        "budgetTier": 1000,
+        "popularFilters": { "freeCancellation": false, "spa": false, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Cycling"],
+        "amenities": ["Wine Cellar", "Gourmet Kitchen", "Terrace"]
+      }
+    },
+    {
+      "id": "p_1017",
+      "name": "Sandy Toes Family Resort",
+      "propertyType": "Resort",
+      "location": { "address": "100 Family Way", "city": "Sunshine Coast", "country": "Australia" },
+      "rating": { "score": 4.3, "reviews": 2200, "couplesScore": 8.0 },
+      "pricing": { "currency": "USD", "pricePerNight": 210, "totalOriginalPrice": 500, "totalDiscountedPrice": 420, "bookingDuration": "1 family suite 2 days", "includesTaxesAndFees": true, "tags": ["Kids eat free"] },
+      "content": {
+        "images": ["/res/img/properties/p_1017_1.jpg", "/res/img/properties/p_1017_2.jpg", "/res/img/properties/p_1017_3.jpg"],
+        "shortDescription": "Action-packed resort perfect for children of all ages.",
+        "fullOverview": "Features water slides, a kids club, and daily entertainment programs."
+      },
+      "filterableAttributes": {
+        "budgetTier": 500,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": true, "hotTubJacuzzi": false, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Beach", "Cycling"],
+        "amenities": ["Water park", "Kids Club", "Buffet"]
+      }
+    },
+    {
+      "id": "p_1018",
+      "name": "Minimalist Pods",
+      "propertyType": "Shared Space",
+      "location": { "address": "Tech District", "city": "Melbourne", "country": "Australia" },
+      "rating": { "score": 3.7, "reviews": 540, "couplesScore": 6.0 },
+      "pricing": { "currency": "USD", "pricePerNight": 45, "totalOriginalPrice": 100, "totalDiscountedPrice": 90, "bookingDuration": "1 pod 2 days", "includesTaxesAndFees": true, "tags": [] },
+      "content": {
+        "images": ["/res/img/properties/p_1018_1.jpg", "/res/img/properties/p_1018_2.jpg", "/res/img/properties/p_1018_3.jpg"],
+        "shortDescription": "Japanese-style capsule living in the CBD.",
+        "fullOverview": "High-tech, private sleeping pods designed for maximum efficiency and minimalist comfort."
+      },
+      "filterableAttributes": {
+        "budgetTier": 200,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": false, "hotTubJacuzzi": false, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Night lights"],
+        "amenities": ["High-speed WiFi", "Secure storage", "Shared bathrooms"]
+      }
+    },
+    {
+      "id": "p_1019",
+      "name": "Harbor View Heritage",
+      "propertyType": "Hotel",
+      "location": { "address": "Dockside", "city": "Fremantle", "country": "Australia" },
+      "rating": { "score": 4.5, "reviews": 890, "couplesScore": 8.7 },
+      "pricing": { "currency": "USD", "pricePerNight": 280, "totalOriginalPrice": 600, "totalDiscountedPrice": 560, "bookingDuration": "1 room 2 days", "includesTaxesAndFees": false, "tags": ["Ocean views"] },
+      "content": {
+        "images": ["/res/img/properties/p_1019_1.jpg", "/res/img/properties/p_1019_2.jpg", "/res/img/properties/p_1019_3.jpg"],
+        "shortDescription": "Boutique hotel overlooking the historic harbor.",
+        "fullOverview": "Watch the ships come in from your balcony in this renovated 1920s warehouse."
+      },
+      "filterableAttributes": {
+        "budgetTier": 1000,
+        "popularFilters": { "freeCancellation": true, "spa": false, "beachFront": true, "hotTubJacuzzi": false, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Fishing", "Night lights"],
+        "amenities": ["Balcony", "Restaurant", "Room service"]
+      }
+    },
+    {
+      "id": "p_1020",
+      "name": "The Executive Retreat",
+      "propertyType": "Hotel and apartments",
+      "location": { "address": "100 Capital Way", "city": "Canberra", "country": "Australia" },
+      "rating": { "score": 4.7, "reviews": 620, "couplesScore": 9.1 },
+      "pricing": { "currency": "USD", "pricePerNight": 550, "totalOriginalPrice": 1200, "totalDiscountedPrice": 1100, "bookingDuration": "1 suite 2 days", "includesTaxesAndFees": true, "tags": ["Discreet"] },
+      "content": {
+        "images": ["/res/img/properties/p_1020_1.jpg", "/res/img/properties/p_1020_2.jpg", "/res/img/properties/p_1020_3.jpg"],
+        "shortDescription": "High-security luxury apartments for diplomats and executives.",
+        "fullOverview": "Privacy and premium service are paramount here, featuring private boardroom access."
+      },
+      "filterableAttributes": {
+        "budgetTier": 2000,
+        "popularFilters": { "freeCancellation": false, "spa": true, "beachFront": false, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Sauna"],
+        "amenities": ["Boardroom", "Secure parking", "Gym"]
+      }
+    },
+    {
+      "id": "p_1021",
+      "name": "Private Island Sanctuary",
+      "propertyType": "Resort",
+      "location": { "address": "Whitsunday Islands", "city": "Queensland", "country": "Australia" },
+      "rating": { "score": 5.0, "reviews": 120, "couplesScore": 10.0 },
+      "pricing": { "currency": "USD", "pricePerNight": 3500, "totalOriginalPrice": 7500, "totalDiscountedPrice": 7000, "bookingDuration": "1 villa 2 days", "includesTaxesAndFees": true, "tags": ["All-inclusive"] },
+      "content": {
+        "images": ["/res/img/properties/p_1021_1.jpg", "/res/img/properties/p_1021_2.jpg", "/res/img/properties/p_1021_3.jpg"],
+        "shortDescription": "Your own slice of paradise.",
+        "fullOverview": "Book a private villa on an exclusive island. Includes a dedicated staff, private pool, and yacht access."
+      },
+      "filterableAttributes": {
+        "budgetTier": 5000,
+        "popularFilters": { "freeCancellation": true, "spa": true, "beachFront": true, "hotTubJacuzzi": true, "bookWithoutCreditCard": false, "noPrepayment": false },
+        "activities": ["Beach", "Fishing", "Sauna"],
+        "amenities": ["Private Pool", "Yacht mooring", "Butler"]
+      }
+    }
+  ]
+}

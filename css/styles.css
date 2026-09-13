@@ -71,6 +71,26 @@ img {
     cursor: pointer;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #4F4F4F;
+    margin: 24px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #E0E0E0;
+}
+
 /* Header */
 .navbar {
     width: 100%;

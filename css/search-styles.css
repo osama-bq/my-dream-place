@@ -232,6 +232,7 @@
 
 .result-list .card-img {
     flex: 1;
+    max-height: 240px;
 }
 
 .result-list .card-info {
@@ -316,7 +317,7 @@
     padding: 2.5px;
 }
 
-.result-list .card-info .rating .amount {
+.result-list .card-info .rating .details {
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
@@ -460,6 +461,10 @@
         flex: 2;
     }
 
+    .result-list .card-img {
+        max-height: 450px;
+    }
+
     .filter-list-item .count {
         display: none;
     }
@@ -511,6 +516,10 @@
 
     .sort-and-filter-bar .btn-group .btn-group-item {
         font-size: 12px;
+    }
+
+    .result-list .card-img {
+        max-height: fit-content;
     }
 
     .result-list .card-info {
