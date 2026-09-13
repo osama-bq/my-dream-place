@@ -7,7 +7,7 @@ function resetFilters() {
 function filterByPropertyName(arr) {
     const suffix = searchInput.value.trim().toLowerCase();
     return arr.filter(({name}) => {
-        return name.toLowerCase().split(' ').find(word => word.startsWith(suffix))
+        return name.toLowerCase().split(' ').some(word => word.startsWith(suffix))
             || name.toLowerCase().indexOf(suffix) === 0
             || name.toLowerCase().includes(' ' + suffix);
     });

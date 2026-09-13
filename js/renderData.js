@@ -32,6 +32,14 @@ function render([data,]) {
 
     renderData(filtered.slice(0, SHOW_INITIAL)); // utilities.js
     showEndOfList(filtered.length); // utilities.js
+
+    // Load more button
+    const loadMore = document.querySelector('.load-more .btn');
+
+    loadMore.addEventListener('click', () => {
+        renderData(filtered);
+        loadMore.classList.add('hidden');
+    });
 }
 
 Promise.all([loadData, domReady]).then(render);

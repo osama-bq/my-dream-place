@@ -29,6 +29,7 @@ function renderData(filteredData) {
         const thumbnail = rowTemplate.querySelector('.card-img img');
         const title = rowTemplate.querySelector('.title');
         const ratingAmount = rowTemplate.querySelector('.rating .amount');
+        const ratingStars = rowTemplate.querySelector('.rating .stars');
         const reviews = rowTemplate.querySelector('.rating .reviews');
         const subtitle = rowTemplate.querySelector('.subtitle');
         const desc = rowTemplate.querySelector('.desc');
@@ -44,6 +45,13 @@ function renderData(filteredData) {
         thumbnail.src = `${content.images[0]}`;
         title.innerText = name;
         ratingAmount.innerText = rating.score;
+        ratingStars.style.maskImage = `linear-gradient(
+            to right,
+            black 0%,
+            black ${rating.score * 20}%, /* {rating * 20} % */
+            #0005 ${rating.score * 20}%, /* {rating * 20} % */
+            #0005 100%
+        )`;
         reviews.innerText = rating.reviews;
         subtitle.innerText = content.shortDescription;
         desc.innerText = content.fullOverview;

@@ -482,6 +482,20 @@
 
 
 <!-- Scripts -->
+<script>
+    const filterBtn = document.querySelector('.btn-filter');
+    const filterCollapseBtn = document.querySelector('.btn-collapse');
+
+    filterCollapseBtn.addEventListener('click', () => {
+        const filterSection = document.querySelector('.filter');
+        filterSection.style.top = '100%';
+    });
+
+    filterBtn.addEventListener('click', () => {
+        const filterSection = document.querySelector('.filter');
+        filterSection.style.top = '30%';
+    });
+</script>
 <script src="js/utilities.js"></script>
 <script src="js/renderData.js"></script>
 <script src="js/fillterData.js"></script>
