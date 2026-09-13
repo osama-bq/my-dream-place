@@ -1,7 +1,7 @@
 // constants and global variables
 const SHOW_INITIAL = 5;
 const CURRENCY_SIGN = {'USD': '$'};
-const properties = [];
+var properties = [];
 var filtered = [...properties];
 
 const resultList = document.querySelector('.result-list');
