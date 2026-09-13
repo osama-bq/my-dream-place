@@ -67,13 +67,51 @@ function filterByActivities(arr) {
     });
 }
 
+// Sort function
+function sortResults(arr) {
+    const calcBayesianAverage = ({rating}) => {
+        const {score, reviews} = rating;
+        const k = 100;
+        const m = arr.reduce((acc, {rating}) => acc + rating.score, 0) / arr.length;
+        return (score * reviews + k * m) / (reviews + k);
+    };
+
+    const selectedValue = sortDropdown.value;
+    switch (selectedValue) {
+        case 'recommended':
+            return arr.sort((a, b) => calcBayesianAverage(b) - calcBayesianAverage(a));
+        case 'price-low-to-high':
+            return arr.sort((a, b) => a.pricing.totalDiscountedPrice - b.pricing.totalDiscountedPrice);
+        case 'price-high-to-low':
+            return arr.sort((a, b) => b.pricing.totalDiscountedPrice - a.pricing.totalDiscountedPrice);
+        case 'rating-high-to-low':
+            return arr.sort((a, b) => b.rating.score - a.rating.score);
+        case 'discount-high-to-low':
+            return arr.sort((a, b) => {
+                let aDiscount = calcDiscount(a.pricing.totalOriginalPrice, a.pricing.totalDiscountedPrice);
+                let bDiscount = calcDiscount(b.pricing.totalOriginalPrice, b.pricing.totalDiscountedPrice);
+                return bDiscount - aDiscount;
+            });
+        default:
+            return arr;
+    }
+}
+
 
 // Main filter function
 var cached = null;
 var lastFilter = null;
 const filterFuncs = [filterByPropertyName, filterByBudget, filterByRating, filterByPopularFilters, filterByActivities, filterByPropertyType];
 
-function filter(func) {
+function filterAndSort(func) {
+    if (func === sortResults) {
+        if (!cached) cached = [...properties];
+        sortResults(filtered);
+        renderData(filtered.slice(0, SHOW_INITIAL));
+        showEndOfList(filtered.length);
+        return;
+    }
+
     console.log(`Filtering CALLED by ${func.name}...`);
     if (lastFilter !== func) {
         cached = [...properties];
@@ -87,9 +125,11 @@ function filter(func) {
         lastFilter = func;
     }
 
-    let filtered = func(cached);
+    filtered = func(cached);
     console.log(`Filtering by ${func.name}...`);
     console.log(filtered);
+
+    sortResults(filtered);
     
     renderData(filtered.slice(0, SHOW_INITIAL));
     showEndOfList(filtered.length);
@@ -99,7 +139,7 @@ function filter(func) {
 // Filter by property name
 const searchInput = document.querySelector('.filter-search input');
 searchInput.addEventListener('input', () => {
-    filter(filterByPropertyName);
+    filterAndSort(filterByPropertyName);
 });
 
 // Property type filtering
@@ -111,7 +151,7 @@ Array.from(propertyTypeBtnGroup.children).forEach((btn, idx) => btn.addEventList
     propertyTypeBtnGroup.dataset['selected'] = idx;
     btn.classList.add('selected');
 
-    filter(filterByPropertyType);
+    filterAndSort(filterByPropertyType);
 }));
 
 // Budget-based filtering
@@ -122,11 +162,12 @@ const p1000_2000 = document.getElementById('price-1000-2000');
 const p2000_5000 = document.getElementById('price-2000-5000');
 
 
-p0_200.addEventListener('change', () => filter(filterByBudget));
-p200_500.addEventListener('change', () => filter(filterByBudget));
-p500_1000.addEventListener('change', () => filter(filterByBudget));
-p1000_2000.addEventListener('change', () => filter(filterByBudget));
-p2000_5000.addEventListener('change', () => filter(filterByBudget));
+
+p0_200.addEventListener('change', () => filterAndSort(filterByBudget));
+p200_500.addEventListener('change', () => filterAndSort(filterByBudget));
+p500_1000.addEventListener('change', () => filterAndSort(filterByBudget));
+p1000_2000.addEventListener('change', () => filterAndSort(filterByBudget));
+p2000_5000.addEventListener('change', () => filterAndSort(filterByBudget));
 
 // Rating-based filtering
 const ratingBtnGroup = document.querySelector('.filter-rating .btn-group');
@@ -137,7 +178,7 @@ Array.from(ratingBtnGroup.children).forEach((btn, idx) => btn.addEventListener('
     ratingBtnGroup.dataset['selected'] = idx;
     btn.classList.add('selected');
 
-    filter(filterByRating);
+    filterAndSort(filterByRating);
 }));
 
 // Popular Filters
@@ -148,12 +189,12 @@ const pfHotTubJacuzzi = document.getElementById('hot-tub-jacuzzi');
 const pfBookWithoutCreditCard = document.getElementById('book-without-credit-card');
 const pfNoPrepayment = document.getElementById('no-prepayment');
 
-pfFreeCancellation.addEventListener('change', () => filter(filterByPopularFilters));
-pfSpa.addEventListener('change', () => filter(filterByPopularFilters));
-pfBeachFront.addEventListener('change', () => filter(filterByPopularFilters));
-pfHotTubJacuzzi.addEventListener('change', () => filter(filterByPopularFilters));
-pfBookWithoutCreditCard.addEventListener('change', () => filter(filterByPopularFilters));
-pfNoPrepayment.addEventListener('change', () => filter(filterByPopularFilters));
+pfFreeCancellation.addEventListener('change', () => filterAndSort(filterByPopularFilters));
+pfSpa.addEventListener('change', () => filterAndSort(filterByPopularFilters));
+pfBeachFront.addEventListener('change', () => filterAndSort(filterByPopularFilters));
+pfHotTubJacuzzi.addEventListener('change', () => filterAndSort(filterByPopularFilters));
+pfBookWithoutCreditCard.addEventListener('change', () => filterAndSort(filterByPopularFilters));
+pfNoPrepayment.addEventListener('change', () => filterAndSort(filterByPopularFilters));
 
 
 // Activites-based filtering
@@ -164,9 +205,17 @@ const aCycling = document.getElementById('cycling');
 const aSauna = document.getElementById('sauna');
 const aNightLights = document.getElementById('night-lights');
 
-aFishing.addEventListener('change', () => filter(filterByActivities));
-aHiking.addEventListener('change', () => filter(filterByActivities));
-aBeach.addEventListener('change', () => filter(filterByActivities));
-aCycling.addEventListener('change', () => filter(filterByActivities));
-aSauna.addEventListener('change', () => filter(filterByActivities));
-aNightLights.addEventListener('change', () => filter(filterByActivities));
+aFishing.addEventListener('change', () => filterAndSort(filterByActivities));
+aHiking.addEventListener('change', () => filterAndSort(filterByActivities));
+aBeach.addEventListener('change', () => filterAndSort(filterByActivities));
+aCycling.addEventListener('change', () => filterAndSort(filterByActivities));
+aSauna.addEventListener('change', () => filterAndSort(filterByActivities));
+aNightLights.addEventListener('change', () => filterAndSort(filterByActivities));
+
+// Dropdown sorting
+const sortDropdown = document.getElementById('sort-by');
+
+sortDropdown.addEventListener('change', () => {
+    const selectedValue = sortDropdown.value;
+    filterAndSort(sortResults);
+});

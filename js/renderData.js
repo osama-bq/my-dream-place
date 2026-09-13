@@ -15,8 +15,6 @@ const domReady = new Promise((resolve) => {
 function render([data,]) {
     const params = new URLSearchParams(window.location.search);
     const location = params.get('location').trim();
-
-    let filtered;
     
     if (location) {
         filtered = data.filter(p => location.toLowerCase() === p.location.city.toLowerCase());

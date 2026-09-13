@@ -1,21 +1,22 @@
 // constants and global variables
 const SHOW_INITIAL = 5;
 const CURRENCY_SIGN = {'USD': '$'};
-var properties = [];
+const properties = [];
+var filtered = [...properties];
 
 const resultList = document.querySelector('.result-list');
 var rowTemplate = document.querySelector('.card-row');
 
 // functions
-function renderData(filteredData) {
-    function calcDiscount(original, discounted) {
-        original = Number.parseFloat(original);
-        discounted = Number.parseFloat(discounted);
-        return Math.round(
-            100 * (original - discounted) / original
-        );
-    }
+function calcDiscount(original, discounted) {
+    original = Number.parseFloat(original);
+    discounted = Number.parseFloat(discounted);
+    return Math.round(
+        100 * (original - discounted) / original
+    );
+}
 
+function renderData(filteredData) {
     resultList.innerHTML = ''; // clear everything inside
 
     filteredData.forEach(result => {
