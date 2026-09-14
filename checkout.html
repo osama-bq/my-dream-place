@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+                
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/checkout-styles.css">
+    <title>Homepage</title>
+</head>
+<body>
+<!-- Header -->
+<nav class="navbar">
+    <div class="nav-content container">
+        <div class="brand">
+            <img src="res/icon/plane-logo.png" alt="">
+            <h3 class="brand-name">my Dream Place</h3>
+        </div>
+    </div>
+</nav>
+<!-- Header -->
+
+<div class="container">
+    <h1 class="page-title">Secure your reservation</h1>
+</div>
+
+<!-- Advisory Banner -->
+<div class="container adv-banner">
+    <img src="res/icon/warning.png" alt="warning Icon">
+    <span class="adv-banner-msg">
+        Check the latest COVID-19 restrictions before you travel. <a href="#">Learn More</a>
+    </span>
+</div>
+<!-- Advisory Banner -->
+
+<!-- Checkout Form -->
+<main class="container checkout">
+    <div class="checkout-forms">
+        <div class="card-form">
+            <div class="card-form-header">
+                <div class="header-icon">
+                    <img src="res/icon/security-user.png" alt="">
+                </div>
+                <h4 class="header-title">Room 1</h4>
+            </div>
+            <div class="card-form-body">
+                <div class="name-field">
+                    <div class="input-group first-name">
+                        <label for="first-name">First Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-group last-name">
+                        <label for="first-name">Last Name</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="mobile-number-field">
+                    <div class="input-group">
+                        <label for="mobile-number">Mobile Number</label>
+                        <div class="mobile-number-input">
+                            <select name="country-code" id="country-code">
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+880">🇧🇩 +880</option>
+                                <option value="+92">🇵🇰 +92</option>
+                                <option value="+86">🇨🇳 +86</option>
+                                <option value="+81">🇯🇵 +81</option>
+                                <option value="+82">🇰🇷 +82</option>
+                                <option value="+61">🇦🇺 +61</option>
+                                <option value="+64">🇳🇿 +64</option>
+                                <option value="+971">🇦🇪 +971</option>
+                                <option value="+966">🇸🇦 +966</option>
+                                <option value="+974">🇶🇦 +974</option>
+                                <option value="+965">🇰🇼 +965</option>
+                                <option value="+968">🇴🇲 +968</option>
+                                <option value="+973">🇧🇭 +973</option>
+                                <option value="+49">🇩🇪 +49</option>
+                                <option value="+33">🇫🇷 +33</option>
+                                <option value="+39">🇮🇹 +39</option>
+                                <option value="+34">🇪🇸 +34</option>
+                                <option value="+7">🇷🇺 +7</option>
+                                <option value="+90">🇹🇷 +90</option>
+                                <option value="+65">🇸🇬 +65</option>
+                                <option value="+60">🇲🇾 +60</option>
+                                <option value="+62">🇮🇩 +62</option>
+                                <option value="+66">🇹🇭 +66</option>
+                                <option value="+84">🇻🇳 +84</option>
+                                <option value="+27">🇿🇦 +27</option>
+                                <option value="+234">🇳🇬 +234</option>
+                                <option value="+55">🇧🇷 +55</option>
+                                <option value="+52">🇲🇽 +52</option>
+                            </select>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="receive-alerts">
+                    <input type="checkbox" id="receive-alerts">
+                    <label for="receive-alerts">Receive text alerts about this trip.</label>
+                </div>
+            </div>
+        </div>
+        <div class="card-form">
+            <div class="card-form-header">
+                <div class="header-icon">
+                    <img src="res/icon/card-tick.png" alt="">
+                </div>
+                <h4 class="header-title">Payment options</h4>
+            </div>
+            <div class="tabs-bar">
+                <ul class="tabs">
+                    <li class="tab active">Debit/Credit Card</li>
+                    <li class="tab">Paypal</li>
+                    <li class="tab">Bank transfer</li>
+                </ul>
+            </div>
+            <div class="card-form-body">
+                <div class="card-type">
+                    <span class="mastercard">
+                        <img src="res/icon/mastercard.png" alt="">
+                    </span>
+                    <span class="visa">
+                        <img src="res/icon/visa.png" alt="">
+                    </span>
+                    <span class="american-express">
+                        <img src="res/icon/american-express.png" alt="">
+                    </span>
+                    <span class="discover">
+                        <img src="res/icon/discover.png" alt="">
+                    </span>
+                </div>
+                <div class="input-group name-on-card">
+                    <label for="first-name">Name on card</label>
+                    <input type="text">
+                </div>
+                <div class="input-group card-number">
+                    <label for="first-name">Card Number</label>
+                    <input type="text">
+                </div>
+                <div class="expiration-date">
+                    <div class="input-group">
+                        <label for="first-name">Expiration Date</label>
+                        <div class="date">
+                            <select>
+                                <option value="0">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select>
+                                <option value="0">Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="codes">
+                    <div class="input-group security-code">
+                        <label for="first-name">Security Code</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-group zip-code">
+                        <label for="first-name">ZIP Code</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-form">
+            <div class="card-form-header important-info">
+                <h4 class="header-title">Important information about your booking</h4>
+            </div>
+            <div class="card-form-body important-info-body">
+                <ol class="important-info-list">
+                    <li><p>This rate is non-refundable. If you change or cancel your booking you will not get a refund or credit to use for a future stay.</p></li>
+                    <li><p>Stay extensions will require a new reservation.</p></li>
+                    <li><p>Front desk staff will greet guests on arrival</p></li>
+                    <li><p>No refunds will be issued for late check-in or early check-out.</p></li>
+                </ol>
+                <p class="terms-of-use">By clicking the button below, I acknowledge that I have reviewed the <a href="#">Privacy Statement</a> and have reviewd and accept the <a href="#">Rules and Restrictions</a> and <a href="#">Terms of Use</a>.</p>
+                <button class="btn btn-booking">Complete Booking</button>
+            </div>
+        </div>
+        <div class="card-form"></div>
+        <div class="card-form"></div>
+    </div>
+    <div class="sidebar">
+        <div class="card property-card">
+            <img src="res/img/properties/p_1010_1.jpg" alt="">
+            <div class="card-body">
+                <h2 class="property-title">Lakeside Motel Warefront</h2>
+                <div class="rating">
+                    <div class="stars">
+                        <div class="star"><img src="res/icon/star.png" alt=""></div>
+                        <div class="star"><img src="res/icon/star.png" alt=""></div>
+                        <div class="star"><img src="res/icon/star.png" alt=""></div>
+                        <div class="star"><img src="res/icon/star.png" alt=""></div>
+                        <div class="star"><img src="res/icon/star.png" alt=""></div>
+                    </div>
+                    <div class="details">
+                        <span class="amount">2.5</span> (<span class="reviews">1200</span> Reviews)
+                    </div>
+                </div>
+                <div class="booking-details">
+                    <p class="red-text">Non refundable</p>
+                    <p>Check in: Sunday, March 18, 2026</p>
+                    <p>Check out: Tuesday, March 20, 2026</p>
+                    <p>2 night stay</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-form price-details">
+            <div class="card-form-header">
+                <h4 class="header-title">Price Details</h4>
+            </div>
+            <div class="card-form-body price-details-body">
+                <ul class="price-list">
+                    <li class="price-item">
+                        <span class="item-name">1 room x 2 nights</span>
+                        <span class="item-price">$ 120.32</span>
+                    </li>
+                    <li class="price-item">
+                        <span class="item-name">Tax and service fees</span>
+                        <span class="item-price">$ 8.32</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-form-body price-total-body">
+                <div class="total">
+                    <span class="total-name">Total</span>
+                    <span class="total-price">$130</span>
+                </div>
+                <p class="coupon-msg">Use a coupon, credit or promotional code</p>
+                <div class="input-group">
+                    <label for="coupon-code">Coupon code</label>
+                    <div class="coupon-input">
+                        <input type="text" id="coupon-code">
+                        <input type="submit" value="Apply Coupon" class="btn btn-apply-coupon">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Checkout Form -->
