@@ -58,9 +58,11 @@ function renderData(filteredData) {
         const details = rowTemplate.querySelector('.right-side .details');
         const taxes = rowTemplate.querySelector('.tax-msg');
         const inputId = rowTemplate.querySelector('#property-id');
+        const mobileInputId = rowTemplate.querySelector('#property-id-mobile');
 
 
         inputId.value = id;
+        mobileInputId.value = id;
         thumbnail.src = `${content.images[0]}`;
         title.innerText = name;
         ratingAmount.innerText = rating.score;
