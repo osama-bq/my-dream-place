@@ -53,6 +53,7 @@ body {
     color: #333333;
     padding: 10px 14px;
     cursor: pointer;
+    text-align: center;
 }
 
 .tab.active {
@@ -64,6 +65,7 @@ body {
     margin-top: 40px;
     display: flex;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .property-details-col {
@@ -112,7 +114,6 @@ body {
     border-radius: 6px;
     background: #FFFFFF;
     margin-top: 32px;
-    margin-bottom: 40px;
 }
 
 .overview-body {
@@ -262,11 +263,12 @@ body {
 .room-card {
     border-radius: 6px;
     background: #FFFFFF;
+    height: 100%;
 }
 
 .promotional-coupon {
     flex: 1;
-    min-width: 400px;
+    width: 400px;
     max-height: 340px;
     border-radius: 6px;
     overflow: hidden;
@@ -276,6 +278,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left;
 }
 
 .room-card img {
@@ -322,4 +325,68 @@ body {
     padding-bottom: 12px;
     padding-left: 18px;
     margin-top: 24px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2%;
+}
+
+
+/* ==================================== */
+/* ===== Media Queries (Laptop) ======= */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    .promotional-coupon {
+        display: none;
+    }
+}
+
+/* ==================================== */
+/* ====== Media Queries (Tablet) ====== */
+/* ==================================== */
+
+@media (max-width: 790px) {
+    .container {
+        width: 85%;
+    }
+
+    .property-details {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .primary-image {
+        grid-column: span 2;
+    }
+}
+
+/* ==================================== */
+/* ==== Media Queries (Smartphone) ==== */
+/* ==================================== */
+
+@media (max-width: 495px) {
+    .container {
+        width: 93%;
+    }
+
+    .property-title {
+        text-align: center;
+    }
+
+    .rating {
+        justify-content: center;
+    }
+
+    .property-location {
+        justify-content: center;
+    }
+
+    .gallery-grid :not(.primary-image) img {
+        max-height: 100%;
+        display: none;
+    }
 }
