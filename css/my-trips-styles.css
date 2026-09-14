@@ -1,0 +1,130 @@
+body {
+    background: #F4F4F4;
+}
+
+.history-dest {
+    margin-bottom: 60px;
+}
+
+.my-trips {
+    margin-bottom: 416px;
+}
+
+.trips {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.trip {
+    display: flex;
+    border: 1px solid #E0E0E0;
+    padding: 20px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    gap: 24px;
+}
+
+.trip-img {
+    flex: 1;
+}
+
+.tip-img img {
+    border-radius: 5px;
+}
+
+.trip-info {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: SF Pro Display;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1%;
+    color: #4F4F4F;
+}
+
+.trip-info .red-text {
+    color: #EB5757;
+}
+
+.trip-info .stars {
+    z-index: 1;
+}
+
+.trips .section-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    vertical-align: middle;
+    margin-bottom: 28px;
+    color: #1A1A1A;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side .offer {
+    background: #EB5757;
+    text-wrap: nowrap;
+}
+
+
+.right-side {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.right-side .discount {
+    background: #219653;
+    margin-bottom: 6px;
+}
+
+.right-side .details {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: right;
+    vertical-align: middle;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.right-side .amount {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    text-align: right;
+    vertical-align: middle;
+    margin-bottom: 6px;
+}
+
+.right-side .prev-amount {
+    font-size: 14px;
+    color: #EB5757;
+}
+
+.right-side .current-amount {
+    font-size: 20px;
+    color: #333333;;
+}
+
+.btn-details {
+    width: 143;
+    height: 40;
+    opacity: 1;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    margin-top: 16px;
+}
