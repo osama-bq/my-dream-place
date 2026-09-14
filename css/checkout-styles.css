@@ -79,10 +79,23 @@ body {
     gap: 12px;
 }
 
+.mobile-number-input {
+    display: flex;
+}
+
+.mobile-number-field input[type="text"] {
+    width: 100%;
+}
+
 .input-group {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.input-group input[type="text"]:not(.mobile-number-field input[type="text"]) {
+    width: 100%;
 }
 
 .input-group input[type="text"],
@@ -274,12 +287,16 @@ body {
     display: flex;
     gap: 6px;
     align-items: center;
+    justify-content: space-between;
+}
+
+input#coupon-code {
+    width: 100%;
 }
 
 .btn.btn-apply-coupon {
     background: #333333;
     color: white;
-    width: 132px;
     height: 44px;
     border-radius: 6px;
     opacity: 1;
@@ -301,7 +318,6 @@ body {
 
 .property-card {
     background: #FFFFFF;
-    margin-bottom: 30px;
 }
 
 .property-card .card-body {
@@ -331,4 +347,82 @@ body {
 
 .booking-details .red-text {
     color: #EB5757;
+}
+
+.property-card {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.property-card img {
+    max-height: 200px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* ==================================== */
+/* ===== Media Queries (Laptop) ======= */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    .checkout {
+        flex-direction: column-reverse;
+    }
+    .sidebar {
+        flex-direction: row;
+        align-items: center;
+    }
+    .property-card {
+        flex: 1;
+    }
+    .price-details {
+        flex: 1;
+    }
+}
+
+/* ==================================== */
+/* ====== Media Queries (Tablet) ====== */
+/* ==================================== */
+
+@media (max-width: 790px) {
+    .sidebar {
+        flex-direction: column;
+    }
+    .property-card img {
+        max-height: 100%;
+    }
+    .price-details {
+        width: 100%;
+    }
+    .card-form-body {
+        max-width: 100%;
+    }
+}
+
+/* ==================================== */
+/* ==== Media Queries (Smartphone) ==== */
+/* ==================================== */
+
+@media (max-width: 495px) {
+    .page-title {
+        text-align: center;
+    }
+    .coupon-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-apply-coupon {
+        width: 100%;
+    }
+    .btn-booking {
+        width: 100%;
+    }
+    .name-field {
+        flex-direction: column;
+    }
 }
