@@ -26,10 +26,14 @@ body {
 
 .trip-img {
     flex: 1;
+    height: 100%;
 }
 
-.tip-img img {
+.trip-img img {
     border-radius: 5px;
+    min-width: 285px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .trip-info {
@@ -127,4 +131,29 @@ body {
     padding-bottom: 10px;
     padding-left: 18px;
     margin-top: 16px;
+}
+
+/* ==================================== */
+/* ===== Media Queries (Laptop) ======= */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    .trips {
+        width: 90%;
+    }
+
+    .trip {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .trip-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-side {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 }
