@@ -246,6 +246,41 @@ img {
 .nav-buttons {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-profile {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 22px;
+}
+
+.btn-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn-notification {
+    display: none;
+    position: relative;
+}
+
+.btn-notification::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: #EB5757;
+
 }
 
 .btn-register {

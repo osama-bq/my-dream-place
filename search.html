@@ -15,7 +15,7 @@
 <nav class="navbar">
     <div class="nav-content container">
         <div class="brand">
-            <img src="res/icon/plane-logo-white.png" alt="">
+            <img src="res/icon/plane-logo.png" alt="">
             <h3 class="brand-name">my Dream Place</h3>
         </div>
         <div class="nav-menu">
@@ -24,7 +24,7 @@
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Discover</a>
+                    <a href="#">Discover</a> 
                 </li>
                 <li>
                     <a href="#">Activities</a>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
         </div>
-        <!-- <div class="nav-mobile-menu">
+        <div class="nav-mobile-menu">
             <div class="mobile-menu-toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -70,8 +70,14 @@
                     </div>
                 </li>
             </ul>
-        </div> -->
+        </div>
         <div class="nav-buttons">
+            <a href="#" class="btn-notification">
+                <img src="res/icon/bell-white.png" alt="">
+            </a>
+            <a href="#" class="btn-profile">
+                <img src="res/img/profile-pic.png" alt="">
+            </a>
             <a href="auth/register.html" class="btn btn-register">
                 <span class="btn-register-text">Register</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="btn-register-icon bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -153,7 +159,7 @@
             <div class="filter-card-header">
                 <div class="filter-search-bar">
                     <h3>Search by property name</h3>
-                    <input type="search">
+                    <input type="search" placeholder="e. g. Lakeside Motel Warefront">
                 </div>
             </div>
         </div>
@@ -508,6 +514,7 @@
         filterSection.style.top = '30%';
     });
 </script>
+<script src="js/script.js"></script>
 <script src="js/utilities.js"></script>
 <script src="js/renderData.js"></script>
 <script src="js/fillterAndSortData.js"></script>
