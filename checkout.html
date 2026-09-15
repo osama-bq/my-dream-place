@@ -338,7 +338,40 @@
 </main>
 <!-- Checkout Form -->
 
-<script src="js/script.js"></script>
+<!-- Booking Succcessful Card -->
+<div class="card-overlay hidden">
+    <div class="booking-success-card">
+      <div class="success-illustration">
+        <img src="res/icon/success-icon.png" alt="Booking successful">
+      </div>
+    
+      <div class="success-content">
+        <h3>Booking Successful</h3>
+    
+        <p>
+          Congratulations your reservation has been made.
+          <br>
+          You will be notified 2 days prior the date.
+        </p>
+      </div>
+    
+      <div class="success-action">
+        <a href="my-trips.html" class="btn" type="button">View Trip</a>
+      </div>
+    
+    </div>
+</div>
+<!-- Booking Succcessful Card -->
 
+<script src="js/script.js"></script>
+<script>
+    const bookingButton = document.querySelector('.btn-booking');
+    const bookingSuccessCardOverlay = document.querySelector('.card-overlay');
+
+    bookingButton.addEventListener('click', () => {
+        bookingSuccessCardOverlay.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 </body>
 </html>
