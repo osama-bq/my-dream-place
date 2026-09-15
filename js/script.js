@@ -9,6 +9,13 @@ if (toggleBtn) {
 }
 
 
+// login simulation
+const urlParams = new URLSearchParams(window.location.search);
+const email = urlParams.get('email');
+const password = urlParams.get('password');
+
+const loggedIn = email && password;
+
 const searchBar = document.querySelector('.search-bar');
 console.log(searchBar);
 searchBar?.querySelectorAll('input').forEach(input => {
@@ -21,9 +28,6 @@ searchBar?.querySelectorAll('input').forEach(input => {
         }
     });
 });
-
-
-const loggedIn = true;
 
 if (loggedIn) {
     console.log('User is logged in');
