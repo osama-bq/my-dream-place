@@ -227,13 +227,19 @@ const p500_1000 = document.getElementById('price-500-1000');
 const p1000_2000 = document.getElementById('price-1000-2000');
 const p2000_5000 = document.getElementById('price-2000-5000');
 
+function budgetFilterListener() {
+    if (p0_200.checked || p200_500.checked || p500_1000.checked || p1000_2000.checked || p2000_5000.checked) {
+        filterAndSort(filterByBudget);
+    } else {
+        filterAndSort(filterByBudget, true);
+    }
+}
 
-
-p0_200.addEventListener('change', () => filterAndSort(filterByBudget));
-p200_500.addEventListener('change', () => filterAndSort(filterByBudget));
-p500_1000.addEventListener('change', () => filterAndSort(filterByBudget));
-p1000_2000.addEventListener('change', () => filterAndSort(filterByBudget));
-p2000_5000.addEventListener('change', () => filterAndSort(filterByBudget));
+p0_200.addEventListener('change', budgetFilterListener);
+p200_500.addEventListener('change', budgetFilterListener);
+p500_1000.addEventListener('change', budgetFilterListener);
+p1000_2000.addEventListener('change', budgetFilterListener);
+p2000_5000.addEventListener('change', budgetFilterListener);
 
 // Rating-based filtering
 const ratingBtnGroup = document.querySelector('.filter-rating .btn-group');
@@ -255,12 +261,20 @@ const pfHotTubJacuzzi = document.getElementById('hot-tub-jacuzzi');
 const pfBookWithoutCreditCard = document.getElementById('book-without-credit-card');
 const pfNoPrepayment = document.getElementById('no-prepayment');
 
-pfFreeCancellation.addEventListener('change', () => filterAndSort(filterByPopularFilters));
-pfSpa.addEventListener('change', () => filterAndSort(filterByPopularFilters));
-pfBeachFront.addEventListener('change', () => filterAndSort(filterByPopularFilters));
-pfHotTubJacuzzi.addEventListener('change', () => filterAndSort(filterByPopularFilters));
-pfBookWithoutCreditCard.addEventListener('change', () => filterAndSort(filterByPopularFilters));
-pfNoPrepayment.addEventListener('change', () => filterAndSort(filterByPopularFilters));
+function popularFiltersListener() {
+    if (pfFreeCancellation.checked || pfSpa.checked || pfBeachFront.checked || pfHotTubJacuzzi.checked || pfBookWithoutCreditCard.checked || pfNoPrepayment.checked) {
+        filterAndSort(filterByPopularFilters);
+    } else {
+        filterAndSort(filterByPopularFilters, true);
+    }
+}
+
+pfFreeCancellation.addEventListener('change', popularFiltersListener);
+pfSpa.addEventListener('change', popularFiltersListener);
+pfBeachFront.addEventListener('change', popularFiltersListener);
+pfHotTubJacuzzi.addEventListener('change', popularFiltersListener);
+pfBookWithoutCreditCard.addEventListener('change', popularFiltersListener);
+pfNoPrepayment.addEventListener('change', popularFiltersListener);
 
 
 // Activites-based filtering
@@ -271,12 +285,20 @@ const aCycling = document.getElementById('cycling');
 const aSauna = document.getElementById('sauna');
 const aNightLights = document.getElementById('night-lights');
 
-aFishing.addEventListener('change', () => filterAndSort(filterByActivities));
-aHiking.addEventListener('change', () => filterAndSort(filterByActivities));
-aBeach.addEventListener('change', () => filterAndSort(filterByActivities));
-aCycling.addEventListener('change', () => filterAndSort(filterByActivities));
-aSauna.addEventListener('change', () => filterAndSort(filterByActivities));
-aNightLights.addEventListener('change', () => filterAndSort(filterByActivities));
+function activitiesFilterListener() {
+    if (aFishing.checked || aHiking.checked || aBeach.checked || aCycling.checked || aSauna.checked || aNightLights.checked) {
+        filterAndSort(filterByActivities);
+    } else {
+        filterAndSort(filterByActivities, true);
+    }
+}
+
+aFishing.addEventListener('change', activitiesFilterListener);
+aHiking.addEventListener('change', activitiesFilterListener);
+aBeach.addEventListener('change', activitiesFilterListener);
+aCycling.addEventListener('change', activitiesFilterListener);
+aSauna.addEventListener('change', activitiesFilterListener);
+aNightLights.addEventListener('change', activitiesFilterListener);
 
 // Dropdown sorting
 const sortDropdown = document.getElementById('sort-by');

@@ -35,17 +35,29 @@
 /* Header */
 .navbar {
     background: transparent;
-    position: absolute;
 }
-.navbar h3, .nav-menu-list li > a {
+
+.navbar h3, .nav-menu-list:not(.mobile-menu-list) li > a {
     color: white;
 }
 
 /* Banner */
 .banner {
+    position: relative;
+    top: -80px;
+    left: 0;
     width: 100%;
     height: 200px;
     background: linear-gradient(180deg, #2969BF 0%, #144E9D 100%);
+}
+
+/* Search Bar */
+.search-bar {
+    translate: -50% calc(-50% - 80px);
+}
+
+.search-form {
+    height: 0px;
 }
 
 /* Seach Result */
@@ -445,6 +457,10 @@
     .filter-list-item .count {
         display: none;
     }
+    
+    .search-form {
+        height: 40px;
+    }
 }
 
 /* ==================================== */
@@ -518,6 +534,11 @@
         align-items: flex-start;
         gap: 8px;
     }
+
+    .search-form {
+        height: 60px;
+    }
+
 }
 
 /* ==================================== */
@@ -551,5 +572,9 @@
     .result-list .card-info .tax-msg,
     .result-list .card-info .right-side .details {
         font-size: 12px;
+    }
+
+    .search-form {
+        height: 80px;
     }
 }

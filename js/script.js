@@ -16,6 +16,18 @@ const password = urlParams.get('password');
 
 const loggedIn = email && password;
 
+if (loggedIn) {
+    console.log('User is logged in');
+    document.querySelector('.nav-content > .nav-buttons .btn-register').style.display = 'none';
+    if (document.querySelector('.nav-content > .nav-mobile-menu')) {
+        document.querySelector('.nav-content > .nav-mobile-menu .btn-register').style.display = 'none';
+        document.querySelector('.nav-content > .nav-mobile-menu .btn-signin').style.display = 'none';
+    }
+    document.querySelector('.nav-content > .nav-buttons .btn-signin').style.display = 'none';
+    document.querySelector('.nav-content > .nav-buttons .btn-notification').style.display = 'block';
+    document.querySelector('.nav-content > .nav-buttons .btn-profile').style.display = 'block';
+}
+
 const searchBar = document.querySelector('.search-bar');
 console.log(searchBar);
 searchBar?.querySelectorAll('input').forEach(input => {
@@ -28,15 +40,3 @@ searchBar?.querySelectorAll('input').forEach(input => {
         }
     });
 });
-
-if (loggedIn) {
-    console.log('User is logged in');
-    document.querySelector('.nav-content > .nav-buttons .btn-register').style.display = 'none';
-    if (document.querySelector('.nav-content > .nav-mobile-menu')) {
-        document.querySelector('.nav-content > .nav-mobile-menu .btn-register').style.display = 'none';
-        document.querySelector('.nav-content > .nav-mobile-menu .btn-signin').style.display = 'none';
-    }
-    document.querySelector('.nav-content > .nav-buttons .btn-signin').style.display = 'none';
-    document.querySelector('.nav-content > .nav-buttons .btn-notification').style.display = 'block';
-    document.querySelector('.nav-content > .nav-buttons .btn-profile').style.display = 'block';
-}
