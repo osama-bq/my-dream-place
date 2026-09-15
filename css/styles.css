@@ -888,7 +888,6 @@ img {
     /* Footer  */
     .footer-links {
         row-gap: 50px;
-        text-align: center;
     }
     .link-category {
         flex-basis: 50%;

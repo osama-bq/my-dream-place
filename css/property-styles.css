@@ -334,6 +334,10 @@ body {
     .primary-image {
         grid-column: span 2;
     }
+
+    .room-search-bar .search-submit {
+        flex-basis: 100%;
+    }
 }
 
 /* ==================================== */
@@ -360,5 +364,9 @@ body {
     .gallery-grid :not(.primary-image) img {
         max-height: 100%;
         display: none;
+    }
+
+    .room-search-bar .guests {
+        flex-basis: 100%;
     }
 }

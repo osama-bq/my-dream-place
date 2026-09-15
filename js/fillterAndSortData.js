@@ -232,6 +232,8 @@ function budgetFilterListener() {
         filterAndSort(filterByBudget);
     } else {
         filterAndSort(filterByBudget, true);
+        filterFuncs.filterByBudget.active = false;
+        filterFuncs.filterByBudget.filterHeader.querySelector('span').remove();
     }
 }
 
@@ -266,6 +268,8 @@ function popularFiltersListener() {
         filterAndSort(filterByPopularFilters);
     } else {
         filterAndSort(filterByPopularFilters, true);
+        filterFuncs.filterByPopularFilters.active = false;
+        filterFuncs.filterByPopularFilters.filterHeader.querySelector('span').remove();
     }
 }
 
@@ -290,6 +294,8 @@ function activitiesFilterListener() {
         filterAndSort(filterByActivities);
     } else {
         filterAndSort(filterByActivities, true);
+        filterFuncs.filterByActivities.active = false;
+        filterFuncs.filterByActivities.filterHeader.querySelector('span').remove();
     }
 }
 
