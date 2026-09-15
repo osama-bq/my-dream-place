@@ -24,6 +24,8 @@ function render([data,]) {
         renderData(filtered);
         loadMore.classList.add('hidden');
     });
+
+    filterAndSort(sortResults); // fillterAndSortData.js
 }
 
 Promise.all([loadData, domReady]).then(render);
