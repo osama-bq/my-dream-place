@@ -7,6 +7,20 @@ toggleBtn.addEventListener('click', function() {
 });
 
 
+const searchBar = document.querySelector('.search-bar');
+console.log(searchBar);
+searchBar.querySelectorAll('input').forEach(input => {
+    input.addEventListener('change', event => {
+        let target = event.target;
+        if (target.value.trim() !== '') {
+            target.classList.add('has-value');
+        } else {
+            target.classList.remove('has-value');
+        }
+    });
+});
+
+
 const loggedIn = true;
 
 if (loggedIn) {

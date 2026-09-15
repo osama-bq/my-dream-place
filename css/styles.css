@@ -399,11 +399,11 @@ img {
     letter-spacing: 2%;
 }
 
-.search-bar .input-field input {
+.search-bar .input-field input{
     opacity: 0;
 }
 
-.search-bar .input-field input:focus {
+.search-bar .input-field input:focus, .search-bar .input-field input.has-value {
     opacity: 1;
 }
 
